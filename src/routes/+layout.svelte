@@ -80,7 +80,7 @@ onMount(async () => {
 		<Favicon url={data.settings.settings.data.favicon.url} />
 	{/if}
 	{#if import.meta.env.MODE == "development"}
-		<!-- <svelte:component this={TailwindConfig}></svelte:component> -->
+		<svelte:component this={TailwindConfig}></svelte:component>
 	{/if}
 	{#if data?.googleFonts}
 		<link href="{data.googleFonts.url}" rel="stylesheet" />
@@ -89,7 +89,7 @@ onMount(async () => {
 		<Analytics type={"google"} uid={data.userid} id={data.settings.data.ga_measurement_id} />
 	{/if}
 	{#if data?.preview}
-		<script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=sveltekit-terminal"></script>
+		<script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=hatch-weaver"></script>
 	{/if}
 </svelte:head>
 
