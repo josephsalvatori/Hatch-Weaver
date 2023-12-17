@@ -51,9 +51,6 @@ export const processImages = (options) => {
 	// process
 	let fnKey = Object.keys(output).filter((v) => src.includes(v)) || "default";
 	let fn = output[fnKey + (dev ? "dev" : "")];
-
-	console.log(src, fn);
-
 	let closestSize = widths.reduce((prev, cur) => (Math.abs(cur - width) < Math.abs(prev - width) ? cur : prev));
 	let closest = fn({ src, srcMobile, breakpoint, quality, size: closestSize });
 	let images = widths.map(size => fn({ src, srcMobile, breakpoint, quality, size }));
