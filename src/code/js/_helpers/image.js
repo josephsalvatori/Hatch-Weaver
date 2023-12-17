@@ -65,7 +65,7 @@ export const processImages = (options) => {
 };
 
 export const output = {
-	unsplash: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `/_vercel/image?url=${encodeURIComponent(src + `&w=${size}`)}&w=${size}&q=${quality} ${size}w` : `/_vercel/image?url=${encodeURIComponent(srcMobile + `&w=${size}`)}&w=${size}&q=${quality} ${size}w`),
+	unsplash: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `${src}&w=${size} ${size}w` : `${srcMobile}&w=${size} ${size}w`),
 	unsplashdev: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `${src}&w=${size} ${size}w` : `${srcMobile}&w=${size} ${size}w`),
 	prismic: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `/_vercel/image?url=${encodeURIComponent(src + `&w=${size}`)}&w=${size}&q=${quality} ${size}w` : `/_vercel/image?url=${encodeURIComponent(srcMobile + `&w=${size}`)}&w=${size}&q=${quality} ${size}w`),
 	prismicdev: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `${src}&w=${size} ${size}w` : `${srcMobile}&w=${size} ${size}w`),
