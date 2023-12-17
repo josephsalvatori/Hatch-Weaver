@@ -1,7 +1,7 @@
 <script>
 import SliceSwitch from "$lib/components/utilities/SliceSwitch.svelte";
 
-/** @type {import("@prismicio/client").Content.TestSlice} */
+/** @type {import("@prismicio/client").Content.RichtextSlice} */
 export let slice;
 
 const { slice_label, slice_type } = slice;
