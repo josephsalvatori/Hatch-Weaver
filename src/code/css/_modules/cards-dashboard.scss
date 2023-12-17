@@ -1,0 +1,17 @@
+.card {
+	display: block;
+
+	&,
+	&-dashboard {
+		border-color: var(--theme-color-font);
+		padding: 20px;
+
+		h1 {
+			font-size: rem(28);
+		}
+
+		p {
+			font-size: rem(14);
+		}
+	}
+}

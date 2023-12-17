@@ -1,0 +1,199 @@
+{
+  "id": "marquee",
+  "type": "SharedSlice",
+  "name": "Marquee",
+  "description": "Marquee",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "marquee_pause_on_hover": {
+          "type": "Boolean",
+          "config": {
+            "label": "Marquee Pause on Hover",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          }
+        },
+        "marquee_speed": {
+          "type": "Number",
+          "config": {
+            "label": "Marquee Speed",
+            "placeholder": "Enter a number below 100"
+          }
+        },
+        "content_box_font_color": {
+          "type": "Color",
+          "config": {
+            "label": "Section Font Color",
+            "placeholder": ""
+          }
+        },
+        "section_padding": {
+          "type": "Select",
+          "config": {
+            "label": "Section Padding",
+            "placeholder": "",
+            "options": [
+              "None",
+              "Top",
+              "Top + Bottom",
+              "Bottom",
+              "Left",
+              "Left + Right",
+              "Right",
+			  "No Top",
+			  "No Bottom",
+              "All"
+            ],
+            "default_value": "None"
+          }
+        },
+        "section_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Section Background Color",
+            "placeholder": ""
+          }
+        },
+        "content_vertical_padding": {
+          "type": "Boolean",
+          "config": {
+            "label": "Content Vertical Padding",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": false
+          }
+        }
+      },
+      "items": {
+        "marquee_row": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Marquee Row",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "marquee_row_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Marquee Row Background Color",
+            "placeholder": ""
+          }
+        },
+        "marquee_row_font_color": {
+          "type": "Color",
+          "config": {
+            "label": "Marquee Row Font Color",
+            "placeholder": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "images",
+      "name": "Images",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "marquee_pause_on_hover": {
+          "type": "Boolean",
+          "config": {
+            "label": "Marquee Pause on Hover",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          }
+        },
+        "marquee_direction": {
+          "type": "Boolean",
+          "config": {
+            "label": "Marquee Direction",
+            "placeholder_false": "Left",
+            "placeholder_true": "Right",
+            "default_value": false
+          }
+        },
+        "marquee_speed": {
+          "type": "Number",
+          "config": {
+            "label": "Marquee Speed",
+            "placeholder": "Enter a number below 100"
+          }
+        },
+        "marquee_max_height": {
+          "type": "Number",
+          "config": {
+            "label": "Marquee Max Height",
+            "placeholder": ""
+          }
+        },
+		"column_alignment": {
+		  "type": "Select",
+		  "config": {
+			"label": "Image Alignment",
+			"placeholder": "",
+			"options": ["Fill", "Top", "Center", "Bottom"],
+			"default_value": "Fill"
+		  }
+		},
+        "section_padding": {
+          "type": "Select",
+          "config": {
+            "label": "Section Padding",
+            "placeholder": "",
+            "options": [
+              "None",
+              "Top",
+              "Top + Bottom",
+              "Bottom",
+              "Left",
+              "Left + Right",
+              "Right",
+			  "No Top",
+			  "No Bottom",
+              "All"
+            ],
+            "default_value": "None"
+          }
+        },
+        "section_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Section Background Color",
+            "placeholder": ""
+          }
+        },
+        "content_vertical_padding": {
+          "type": "Boolean",
+          "config": {
+            "label": "Content Vertical Padding",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": false
+          }
+        }
+      },
+      "items": {
+        "marquee_image": {
+          "type": "Image",
+          "config": {
+            "label": "Marquee Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      }
+    }
+  ]
+}

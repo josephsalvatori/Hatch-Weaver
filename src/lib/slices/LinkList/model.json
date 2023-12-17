@@ -1,0 +1,175 @@
+{
+  "id": "link_list",
+  "type": "SharedSlice",
+  "name": "LinkList",
+  "description": "LinkList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "menu_text": {
+          "type": "Text",
+          "config": {
+            "label": "Menu Text",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link Text",
+            "placeholder": ""
+          }
+        },
+        "link_open": {
+          "type": "Boolean",
+          "config": {
+            "label": "Expand on Mobile",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          }
+        }
+      },
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link Text",
+            "placeholder": ""
+          }
+        }
+      }
+    },
+    {
+      "id": "megaMenu",
+      "name": "Mega Menu",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "menu_text": {
+          "type": "Text",
+          "config": {
+            "label": "Menu Text",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link Text",
+            "placeholder": ""
+          }
+        },
+        "columns": {
+          "type": "Number",
+          "config": {
+            "label": "Columns",
+            "placeholder": ""
+          }
+        },
+        "flex_content": {
+          "type": "Link",
+          "config": {
+            "label": "Flex Content",
+            "select": "document",
+            "customtypes": [
+              "section"
+            ]
+          }
+        },
+        "flex_content_justification": {
+          "type": "Boolean",
+          "config": {
+            "label": "Flex Content Justification",
+            "placeholder_false": "Left",
+            "placeholder_true": "Right",
+            "default_value": false
+          }
+        },
+        "flex_inside": {
+          "type": "Boolean",
+          "config": {
+            "label": "Flex Content within Drawer on Mobile",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          }
+        },
+        "flex_hide": {
+          "type": "Boolean",
+          "config": {
+            "label": "Hide Flex Content on Mobile",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": false
+          }
+        },
+        "link_open": {
+          "type": "Boolean",
+          "config": {
+            "label": "Expand on Mobile",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          }
+        }
+      },
+      "items": {
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link Text",
+            "placeholder": ""
+          }
+        },
+        "link_column": {
+          "type": "Number",
+          "config": {
+            "label": "Link Column",
+            "placeholder": ""
+          }
+        }
+      }
+    }
+  ]
+}

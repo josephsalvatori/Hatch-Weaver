@@ -1,0 +1,95 @@
+{
+  "id": "section_group",
+  "type": "SharedSlice",
+  "name": "SectionGroup",
+  "description": "SectionGroup",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "section": {
+          "type": "Link",
+          "config": {
+            "label": "Grid Section",
+            "select": "document",
+            "customtypes": ["section"]
+          }
+        },
+		"column_count": {
+		  "type": "Select",
+		  "config": {
+			"label": "Columns",
+			"placeholder": "",
+			"options": ["1", "2", "3", "4", "5"],
+			"default_value": "1"
+		  }
+		},
+		"column_gap": {
+		  "type": "Boolean",
+		  "config": {
+			"label": "Column Gap",
+			"placeholder_false": "no",
+			"placeholder_true": "yes",
+			"default_value": true
+		  }
+		},
+		"column_alignment": {
+		  "type": "Select",
+		  "config": {
+			"label": "Column Alignment",
+			"placeholder": "",
+			"options": ["Fill", "Top", "Center", "Bottom"],
+			"default_value": "Fill"
+		  }
+		},
+		"column_screen": {
+		  "type": "Boolean",
+		  "config": {
+			"label": "Fullscreen (minimum)",
+			"placeholder_false": "no",
+			"placeholder_true": "yes",
+			"default_value": false
+		  }
+		},
+		"column_max_width": {
+		  "type": "Number",
+		  "config": {
+			"label": "Column Max Width (px)",
+			"placeholder": "Accepts values between 240 and 1600"
+		  }
+		},
+		"section_padding": {
+		  "type": "Select",
+		  "config": {
+			"label": "Section Padding",
+			"placeholder": "",
+			"options": [
+			  "None",
+			  "Top",
+			  "Top + Bottom",
+			  "Bottom",
+			  "Left",
+			  "Left + Right",
+			  "Right",
+			  "No Top",
+			  "No Bottom",
+			  "All"
+			],
+			"default_value": "None"
+		  }
+		},
+		"section_background_color": {
+		  "type": "Color",
+		  "config": { "label": "Section Background Color", "placeholder": "" }
+		}
+      },
+      "items": {
+      }
+    }
+  ]
+}

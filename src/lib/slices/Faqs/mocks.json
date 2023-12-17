@@ -1,0 +1,53 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"faq_title",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Tempor ad laborum nisi cupidatat veniam sunt aliqua ut voluptate eu magna incididunt deserunt culpa esse. Laborum Lorem id eu mollit aliqua aliqua labore sunt adipisicing ex proident id in. Laboris cillum veniam aute duis sint minim duis minim."
+									}
+								}
+							]
+						}
+					],
+					[
+						"faq_details",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Cillum quis nisi ex do culpa magna ipsum incididunt veniam reprehenderit."
+									}
+								}
+							]
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "with_media",
+		"primary": {},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

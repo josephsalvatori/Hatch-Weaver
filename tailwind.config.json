@@ -1,0 +1,37 @@
+{
+	"content": [
+		"./src/**/*.{html,js,svelte,ts}"
+	],
+	"theme": {
+		"screens": {
+			"xxs": "360px",
+			"xs": "480px",
+			"sm": "640px",
+			"md": "768px",
+			"tb": "769px",
+			"lg": "1024px",
+			"dk": "1025px",
+			"xl": "1280px",
+			"2xl": "1440px",
+			"3xl": "1680px",
+			"4xl": "1920px"
+		},
+		"extend": {
+			"colors": {
+				"theme-base-accent": "var(--theme-base-color-accent)",
+				"theme-base-background": "var(--theme-base-color-background)",
+				"theme-base-font": "var(--theme-base-color-font)",
+				"theme-button-accent": "var(--theme-base-color-button-accent)",
+				"theme-button-background": "var(--theme-color-button-background)",
+				"theme-button-font": "var(--theme-color-button-font)"
+			},
+			"fontFamily": {
+				"theme-body": "var(--theme-font-body)",
+				"theme-body-alt": "var(--theme-font-body-alt)",
+				"theme-headline": "var(--theme-font-headline)",
+				"theme-headline-alt": "var(--theme-font-headline-alt)"
+			}
+		},
+		"plugins": []
+	}
+}

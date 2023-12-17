@@ -1,0 +1,400 @@
+{
+  "id": "settings",
+  "label": "Website Settings",
+  "format": "custom",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Settings": {
+      "favicon": {
+        "type": "Image",
+        "config": {
+          "label": "Favicon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "alternative_landing_page": {
+        "type": "Link",
+        "config": {
+          "label": "Alternative Landing Page",
+          "placeholder": "",
+          "select": "document",
+          "customtypes": ["page"]
+        }
+      }
+    },
+    "Analytics": {
+      "ga_measurement_id": {
+        "type": "Text",
+        "config": {
+          "label": "GA Measurement ID",
+          "placeholder": ""
+        }
+      },
+      "facebook_app_id": {
+        "type": "Text",
+        "config": {
+          "label": "Facebook App ID",
+          "placeholder": ""
+        }
+      }
+    },
+    "Social Media": {
+      "facebook_url": {
+        "type": "Link",
+        "config": {
+          "label": "Facebook URL",
+          "placeholder": "",
+          "select": "web"
+        }
+      },
+      "instagram_url": {
+        "type": "Link",
+        "config": {
+          "label": "Instagram URL",
+          "placeholder": "",
+          "select": "web"
+        }
+      },
+      "twitter_url": {
+        "type": "Link",
+        "config": {
+          "label": "Twitter (X) URL",
+          "placeholder": "",
+          "select": "web"
+        }
+      },
+      "tiktok_url": {
+        "type": "Link",
+        "config": {
+          "label": "TikTok URL",
+          "placeholder": "",
+          "select": "web"
+        }
+      },
+      "youtube_url": {
+        "type": "Link",
+        "config": {
+          "label": "YouTube URL",
+          "placeholder": "",
+          "select": "web"
+        }
+      }
+    },
+    "Layout": {
+      "border_radius_inner_base": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Components)",
+          "placeholder": ""
+        }
+      },
+      "border_radius_inner_tb": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Components ~ Tablet)",
+          "placeholder": ""
+        }
+      },
+      "border_radius_inner_dk": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Components ~ Desktop)",
+          "placeholder": ""
+        }
+      },
+      "border_radius_input_base": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Inputs)",
+          "placeholder": ""
+        }
+      },
+      "border_radius_input_tb": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Inputs ~ Tablet)",
+          "placeholder": ""
+        }
+      },
+      "border_radius_input_dk": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Inputs ~ Desktop)",
+          "placeholder": ""
+        }
+      },
+      "border_radius_outer_base": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Sections)",
+          "placeholder": ""
+        }
+      },
+      "border_radius_outer_tb": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Sections ~ Tablet)",
+          "placeholder": ""
+        }
+      },
+      "border_radius_outer_dk": {
+        "type": "Number",
+        "config": {
+          "label": "Rounded Corners (Sections ~ Desktop)",
+          "placeholder": ""
+        }
+      },
+      "content_gap_base": {
+        "type": "Number",
+        "config": {
+          "label": "Gap (Content)",
+          "placeholder": ""
+        }
+      },
+      "content_gap_tb": {
+        "type": "Number",
+        "config": {
+          "label": "Gap (Content ~ Tablet)",
+          "placeholder": ""
+        }
+      },
+      "content_gap_dk": {
+        "type": "Number",
+        "config": {
+          "label": "Gap (Content ~ Desktop)",
+          "placeholder": ""
+        }
+      },
+      "content_gutter_base": {
+        "type": "Number",
+        "config": {
+          "label": "Gutter (Content)",
+          "placeholder": ""
+        }
+      },
+      "content_gutter_tb": {
+        "type": "Number",
+        "config": {
+          "label": "Gutter (Content ~ Tablet)",
+          "placeholder": ""
+        }
+      },
+      "content_gutter_dk": {
+        "type": "Number",
+        "config": {
+          "label": "Gutter (Content ~ Desktop)",
+          "placeholder": ""
+        }
+      },
+      "grid_gap_base": {
+        "type": "Number",
+        "config": {
+          "label": "Gap (Grid)",
+          "placeholder": ""
+        }
+      },
+      "grid_gap_tb": {
+        "type": "Number",
+        "config": {
+          "label": "Gap (Grid ~ Tablet)",
+          "placeholder": ""
+        }
+      },
+      "grid_gap_dk": {
+        "type": "Number",
+        "config": {
+          "label": "Gap (Grid ~ Desktop)",
+          "placeholder": ""
+        }
+      },
+      "site_gutter_base": {
+        "type": "Number",
+        "config": {
+          "label": "Gutter (Section)",
+          "placeholder": ""
+        }
+      },
+      "site_gutter_tb": {
+        "type": "Number",
+        "config": {
+          "label": "Gutter (Section ~ Tablet)",
+          "placeholder": ""
+        }
+      },
+      "site_gutter_dk": {
+        "type": "Number",
+        "config": {
+          "label": "Gutter (Section ~ Desktop)",
+          "placeholder": ""
+        }
+      }
+    },
+    "Buttons": {
+      "button_max_width_base": {
+        "type": "Number",
+        "config": {
+          "label": "Max Width (Buttons)",
+          "placeholder": ""
+        }
+      },
+      "button_max_width_tb": {
+        "type": "Number",
+        "config": {
+          "label": "Max Width (Buttons ~ Tablet)",
+          "placeholder": ""
+        }
+      },
+      "button_max_width_dk": {
+        "type": "Number",
+        "config": {
+          "label": "Max Width (Buttons ~ Desktop)",
+          "placeholder": ""
+        }
+      }
+    },
+    "Branding": {
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Site Title",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Site Description",
+          "placeholder": ""
+        }
+      },
+      "theme_background": {
+        "type": "Color",
+        "config": {
+          "label": "Theme Background",
+          "placeholder": ""
+        }
+      },
+      "theme_accent": {
+        "type": "Color",
+        "config": {
+          "label": "Theme Accent",
+          "placeholder": ""
+        }
+      },
+      "theme_font": {
+        "type": "Color",
+        "config": {
+          "label": "Theme Font",
+          "placeholder": ""
+        }
+      },
+      "theme_button_background": {
+        "type": "Color",
+        "config": {
+          "label": "Theme Button Background",
+          "placeholder": ""
+        }
+      },
+      "theme_button_accent": {
+        "type": "Color",
+        "config": {
+          "label": "Theme Button Accent",
+          "placeholder": ""
+        }
+      },
+      "theme_button_font": {
+        "type": "Color",
+        "config": {
+          "label": "Theme Button Font",
+          "placeholder": ""
+        }
+      },
+      "google_font_headlines": {
+        "type": "Text",
+        "config": {
+          "label": "Google Font - Headlines",
+          "placeholder": ""
+        }
+      },
+      "google_font_headlines_alt": {
+        "type": "Text",
+        "config": {
+          "label": "Google Font - Headlines Alt",
+          "placeholder": ""
+        }
+      },
+      "google_font_body": {
+        "type": "Text",
+        "config": {
+          "label": "Google Font - Body",
+          "placeholder": ""
+        }
+      },
+      "google_font_body_alt": {
+        "type": "Text",
+        "config": {
+          "label": "Google Font - Body Alt",
+          "placeholder": ""
+        }
+      }
+    },
+    "Organization": {
+      "organization_name": {
+        "type": "Text",
+        "config": {
+          "label": "Organization Name",
+          "placeholder": ""
+        }
+      },
+      "organization_legal_name": {
+        "type": "Text",
+        "config": {
+          "label": "Organization Legal Name",
+          "placeholder": ""
+        }
+      },
+      "organization_description": {
+        "type": "Text",
+        "config": {
+          "label": "Organization Description",
+          "placeholder": ""
+        }
+      },
+      "organization_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Organization Logo",
+          "constraint": {
+            "width": 320,
+            "height": 320
+          },
+          "thumbnails": []
+        }
+      },
+      "organization_url": {
+        "type": "Link",
+        "config": {
+          "label": "Organization URL",
+          "placeholder": "",
+          "select": "web"
+        }
+      },
+      "organization_email": {
+        "type": "Text",
+        "config": {
+          "label": "Organization Email",
+          "placeholder": ""
+        }
+      },
+      "organization_phone": {
+        "type": "Text",
+        "config": {
+          "label": "Organization Phone",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

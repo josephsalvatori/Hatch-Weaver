@@ -1,0 +1,21 @@
+{
+	"variation": "default",
+	"version": "initial",
+	"items": [
+		{}
+	],
+	"primary": {
+		"content": [
+			{
+				"type": "paragraph",
+				"text": "TEST TEST",
+				"spans": []
+			}
+		],
+		"eyebrow": "Eyebrow",
+		"alignment": "Center"
+	},
+	"id": "one_column_richtext$32e8389e-003d-41f1-88e1-294d61caf4d6",
+	"slice_type": "one_column_richtext",
+	"slice_label": null
+}

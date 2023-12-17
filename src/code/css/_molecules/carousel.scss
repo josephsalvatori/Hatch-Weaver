@@ -1,0 +1,28 @@
+.slides {
+
+	swiper-slide {
+
+		> .slice-section {
+			padding: 0 !important;
+		}
+	}
+
+	&-fill {
+
+		swiper-slide {
+			display: grid;
+		}
+	}
+
+	&-top {
+
+	}
+
+	&-center {
+
+	}
+
+	&-bottom {
+
+	}
+}

@@ -1,0 +1,109 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"menu_text": {
+				"__TYPE__": "FieldContent",
+				"value": "front",
+				"type": "Text"
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://google.com"
+				}
+			},
+			"link_text": {
+				"__TYPE__": "FieldContent",
+				"value": "child",
+				"type": "Text"
+			},
+			"link_open": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "http://google.com"
+							}
+						}
+					],
+					[
+						"link_text",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "grabbed",
+							"type": "Text"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "megaMenu",
+		"primary": {
+			"columns": {
+				"__TYPE__": "FieldContent",
+				"value": "43",
+				"type": "Number"
+			},
+			"flex_content": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			},
+			"flex_content_justification": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"link",
+						{
+							"__TYPE__": "LinkContent",
+							"value": {
+								"__TYPE__": "ExternalLink",
+								"url": "https://prismic.io"
+							}
+						}
+					],
+					[
+						"link_text",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "hundred",
+							"type": "Text"
+						}
+					],
+					[
+						"link_column",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "55",
+							"type": "Number"
+						}
+					]
+				]
+			}
+		]
+	}
+]

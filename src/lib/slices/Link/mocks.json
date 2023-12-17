@@ -1,0 +1,26 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "http://twitter.com"
+				}
+			},
+			"link_text": {
+				"__TYPE__": "FieldContent",
+				"value": "boat",
+				"type": "Text"
+			},
+			"link_style": {
+				"__TYPE__": "FieldContent",
+				"value": "Text",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

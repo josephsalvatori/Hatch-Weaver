@@ -1,0 +1,51 @@
+{
+  "id": "section",
+  "label": "Page Section",
+  "format": "custom",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Section Builder": {
+      "section_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Section Label",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading3"
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "media": {
+              "type": "SharedSlice"
+            },
+            "richtext": {
+              "type": "SharedSlice"
+            },
+            "faqs": {
+              "type": "SharedSlice"
+            },
+            "marquee": {
+              "type": "SharedSlice"
+            },
+            "html": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "Section Settings": {
+      "uid": {
+        "config": {
+          "label": "UID"
+        },
+        "type": "UID"
+      }
+    }
+  }
+}

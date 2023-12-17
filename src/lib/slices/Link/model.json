@@ -1,0 +1,36 @@
+{
+  "id": "link",
+  "type": "SharedSlice",
+  "name": "Link",
+  "description": "Link",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "link": {
+          "type": "Link",
+          "config": { "label": "Link", "placeholder": "", "select": null }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": { "label": "Link Text", "placeholder": "" }
+        },
+        "link_style": {
+          "type": "Select",
+          "config": {
+            "label": "Link Style",
+            "placeholder": "",
+            "options": ["Text", "Button"],
+            "default_value": "Text"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

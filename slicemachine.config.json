@@ -1,0 +1,35 @@
+{
+	"apiEndpoint": "https://hatch-weaver.cdn.prismic.io/api/v2",
+	"repositoryName": "hatch-weaver",
+	"adapter": "@slicemachine/adapter-sveltekit",
+	"libraries": ["./src/lib/slices"],
+	"localSliceSimulatorURL": "http://localhost:5173/slice-simulator",
+	"routes": [
+		{
+			"type": "home",
+			"path": "/"
+		},
+		{
+			"type": "page",
+			"resolvers": {
+				"parent": "parent_page"
+			},
+			"path": "/:parent?/:uid/"
+		},
+		{
+			"type": "category",
+			"path": "/articles/:uid/"
+		},
+		{
+			"type": "article",
+			"resolvers": {
+				"category": "category"
+			},
+			"path": "/articles/:category/:uid/"
+		},
+		{
+			"type": "section",
+			"path": "/preview/:uid/"
+		}
+	]
+}

@@ -1,0 +1,298 @@
+{
+  "id": "carousel",
+  "type": "SharedSlice",
+  "name": "Carousel",
+  "description": "Carousel",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": ""
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "customtypes": [
+              "home",
+              "page"
+            ]
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "button_style": {
+          "type": "Select",
+          "config": {
+            "label": "Button Style",
+            "placeholder": "",
+            "options": [
+              "Primary",
+              "Primary Reverse",
+              "Secondary",
+              "Secondary Reverse",
+              "Inherit",
+              "Inherit Reverse",
+              "Text"
+            ],
+            "default_value": "Primary"
+          }
+        },
+        "content_box_font_color": {
+          "type": "Color",
+          "config": {
+            "label": "Font Color",
+            "placeholder": ""
+          }
+        },
+        "section": {
+          "type": "Link",
+          "config": {
+            "label": "Carousel Section Content",
+            "select": "document",
+            "customtypes": [
+              "section"
+            ]
+          }
+        },
+        "content_pages": {
+          "type": "Number",
+          "config": {
+            "label": "Carousel Pages to Show",
+            "placeholder": ""
+          }
+        },
+        "content_per_page": {
+          "type": "Number",
+          "config": {
+            "label": "Slides Per Page",
+            "placeholder": ""
+          }
+        },
+        "column_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "Slide Alignment",
+            "placeholder": "",
+            "options": [
+              "Fill",
+              "Top",
+              "Center",
+              "Bottom"
+            ],
+            "default_value": "Fill"
+          }
+        },
+        "column_screen": {
+          "type": "Boolean",
+          "config": {
+            "label": "Fullscreen (minimum)",
+            "placeholder_false": "no",
+            "placeholder_true": "yes",
+            "default_value": false
+          }
+        },
+        "section_padding": {
+          "type": "Select",
+          "config": {
+            "label": "Section Padding",
+            "placeholder": "",
+            "options": [
+              "None",
+              "Top",
+              "Top + Bottom",
+              "Bottom",
+              "Left",
+              "Left + Right",
+              "Right",
+			  "No Top",
+			  "No Bottom",
+              "All"
+            ],
+            "default_value": "None"
+          }
+        },
+        "section_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Section Background Color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "articleRecirculation",
+      "name": "Article Recirculation",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "eyebrow": {
+          "type": "Text",
+          "config": {
+            "label": "Eyebrow",
+            "placeholder": ""
+          }
+        },
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item"
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "Button Link",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "customtypes": [
+              "home",
+              "page"
+            ]
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
+        "button_style": {
+          "type": "Select",
+          "config": {
+            "label": "Button Style",
+            "placeholder": "",
+            "options": [
+              "Primary",
+              "Primary Reverse",
+              "Secondary",
+              "Secondary Reverse",
+              "Inherit",
+              "Inherit Reverse",
+              "Text"
+            ],
+            "default_value": "Primary"
+          }
+        },
+        "content_box_font_color": {
+          "type": "Color",
+          "config": {
+            "label": "Font Color",
+            "placeholder": ""
+          }
+        },
+        "section": {
+          "type": "Link",
+          "config": {
+            "label": "Article Category",
+            "select": "document",
+            "customtypes": [
+              "category"
+            ]
+          }
+        },
+        "content_pages": {
+          "type": "Number",
+          "config": {
+            "label": "Carousel Pages to Show",
+            "placeholder": ""
+          }
+        },
+        "content_per_page": {
+          "type": "Number",
+          "config": {
+            "label": "Slides Per Page",
+            "placeholder": ""
+          }
+        },
+        "column_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "Slide Alignment",
+            "placeholder": "",
+            "options": [
+              "Fill",
+              "Top",
+              "Center",
+              "Bottom"
+            ],
+            "default_value": "Fill"
+          }
+        },
+        "column_screen": {
+          "type": "Boolean",
+          "config": {
+            "label": "Fullscreen (minimum)",
+            "placeholder_false": "no",
+            "placeholder_true": "yes",
+            "default_value": false
+          }
+        },
+        "section_padding": {
+          "type": "Select",
+          "config": {
+            "label": "Section Padding",
+            "placeholder": "",
+            "options": [
+              "None",
+              "Top",
+              "Top + Bottom",
+              "Bottom",
+              "Left",
+              "Left + Right",
+              "Right",
+			  "No Top",
+			  "No Bottom",
+              "All"
+            ],
+            "default_value": "None"
+          }
+        },
+        "section_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Section Background Color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

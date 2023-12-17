@@ -1,0 +1,224 @@
+{
+  "id": "faqs",
+  "type": "SharedSlice",
+  "name": "Faqs",
+  "description": "Faqs",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Faqs",
+      "imageUrl": "",
+      "primary": {
+		"eyebrow": {
+			"type": "Text",
+			"config": { "label": "Eyebrow", "placeholder": "" }
+		  },
+		  "content": {
+			"type": "StructuredText",
+			"config": {
+			  "label": "Content",
+			  "placeholder": "",
+			  "allowTargetBlank": true,
+			  "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item"
+			}
+		  },
+		  "content_box_text_justification": {
+			"type": "Select",
+			"config": {
+			  "label": "Content Box Text Justification",
+			  "placeholder": "",
+			  "options": ["Left", "Center", "Right"],
+			  "default_value": "Center"
+			}
+		  },
+		  "content_box_horizontal": {
+			"type": "Select",
+			"config": {
+			  "label": "Content Box Horizontal Alignment",
+			  "placeholder": "",
+			  "options": ["Left", "Center", "Right"],
+			  "default_value": "Left"
+			}
+		  },
+		  "content_box_vertical": {
+			"type": "Select",
+			"config": {
+			  "label": "Content Box Vertical Alignment",
+			  "placeholder": "",
+			  "options": ["Top", "Center", "Bottom"],
+			  "default_value": "Center"
+			}
+		  },
+		  "content_max_width": {
+			"type": "Number",
+			"config": {
+			  "label": "Content Max Width (px)",
+			  "placeholder": "Accepts values between 300 and 1600"
+			}
+		  },
+		  "content_box_font_color": {
+			"type": "Color",
+			"config": { "label": "Section Font Color", "placeholder": "" }
+		  },
+		"section_padding": {
+			"type": "Select",
+			"config": {
+			  "label": "Section Padding",
+			  "placeholder": "",
+			  "options": [
+				"None",
+				"Top",
+				"Top + Bottom",
+				"Bottom",
+				"Left",
+				"Left + Right",
+				"Right",
+				"No Top",
+				"No Bottom",
+				"All"
+			  ],
+			  "default_value": "None"
+			}
+		  },
+		  "section_background_color": {
+			"type": "Color",
+			"config": { "label": "Section Background Color", "placeholder": "" }
+		  }
+	  },
+      "items": {
+        "faq_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "FAQ Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "faq_details": {
+          "type": "StructuredText",
+          "config": {
+            "label": "FAQ Details",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,preformatted"
+          }
+        }
+      }
+    },
+    {
+      "id": "with_media",
+      "name": "With Media",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Faqs with a Media component",
+      "imageUrl": "",
+      "primary": {
+		"image": {
+			"type": "Image",
+			"config": { "label": "Image", "constraint": {}, "thumbnails": [] }
+		  },
+		  "video": {
+			"type": "Link",
+			"config": {
+			  "label": "Video",
+			  "placeholder": "",
+			  "allowTargetBlank": false,
+			  "select": null
+			}
+		  },
+		  "media_fit": {
+			"type": "Select",
+			"config": {
+			  "label": "Media Fit",
+			  "placeholder": "",
+			  "options": ["Cover", "Contain"],
+			  "default_value": "Cover"
+			}
+		  },
+		  "eyebrow": {
+			"type": "Text",
+			"config": { "label": "Eyebrow", "placeholder": "" }
+		  },
+		  "content": {
+			"type": "StructuredText",
+			"config": {
+			  "label": "Content",
+			  "placeholder": "",
+			  "allowTargetBlank": true,
+			  "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item"
+			}
+		  },
+		  "content_box_text_justification": {
+			"type": "Select",
+			"config": {
+			  "label": "Content Box Text Justification",
+			  "placeholder": "",
+			  "options": ["Left", "Center", "Right"],
+			  "default_value": "Center"
+			}
+		  },
+		  "content_box_vertical": {
+			"type": "Select",
+			"config": {
+			  "label": "Content Box Vertical Alignment",
+			  "placeholder": "",
+			  "options": ["Top", "Center", "Bottom"],
+			  "default_value": "Center"
+			}
+		  },
+		  "content_box_font_color": {
+			"type": "Color",
+			"config": { "label": "Content Box Font Color", "placeholder": "" }
+		  },
+		"section_padding": {
+			"type": "Select",
+			"config": {
+			  "label": "Section Padding",
+			  "placeholder": "",
+			  "options": [
+				"None",
+				"Top",
+				"Top + Bottom",
+				"Bottom",
+				"Left",
+				"Left + Right",
+				"Right",
+				"No Top",
+				"No Bottom",
+				"All"
+			  ],
+			  "default_value": "None"
+			}
+		  },
+		  "section_background_color": {
+			"type": "Color",
+			"config": { "label": "Section Background Color", "placeholder": "" }
+		  }
+	  },
+      "items": {
+		"faq_title": {
+			"type": "StructuredText",
+			"config": {
+			  "label": "FAQ Title",
+			  "placeholder": "",
+			  "allowTargetBlank": false,
+			  "single": "paragraph,strong,em"
+			}
+		  },
+		  "faq_details": {
+			"type": "StructuredText",
+			"config": {
+			  "label": "FAQ Details",
+			  "placeholder": "",
+			  "allowTargetBlank": true,
+			  "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,preformatted"
+			}
+		  }
+	  }
+    }
+  ]
+}

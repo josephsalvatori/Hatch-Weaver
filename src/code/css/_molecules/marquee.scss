@@ -1,0 +1,30 @@
+.marquee-container {
+	align-items: center;
+	border-bottom: 2px solid var(--background-color, currentColor);
+	display: inline-flex;
+	flex-direction: row;
+	overflow: hidden;
+	min-height: 40px;
+	pointer-events: none;
+	position: relative;
+	width: 100%;
+
+	&:first-child {
+		border-top: 2px solid var(--background-color, currentColor);
+	}
+}
+
+.marquee {
+	align-items: center;
+	color: var(--content-color, currentColor);
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: row;
+	line-height: 1;
+	pointer-events: none;
+	z-index: 1;
+
+	a {
+		pointer-events: initial;
+	}
+}

@@ -1,0 +1,29 @@
+$browser-context: 16;
+
+/** Convert font pixels to em for font-sizing % */
+@function em($pixels, $context: $browser-context) {
+
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return calc($pixels / $context * 1em);
+}
+
+/** Convert font pixels to rem for absolute font-sizing */
+@function rem($pixels, $context: $browser-context) {
+
+	@if (unitless($pixels)) {
+		$pixels: $pixels * 1px;
+	}
+
+	@if (unitless($context)) {
+		$context: $context * 1px;
+	}
+
+	@return calc($pixels / $context * 1rem);
+}

@@ -1,0 +1,153 @@
+form {
+
+	label,
+	legend,
+	.label,
+	.legend {
+		display: block;
+		font-size: em(14px);
+		line-height: 1;
+		margin-bottom: 8px;
+	}
+
+	input {
+		border-radius: var(--border-radius-input, 8px);
+		border-width: var(--border-width, 2px);
+		font-size: em(16px);
+
+		&::placeholder {
+			opacity: 0.3;
+		}
+
+		&:focus-visible,
+		&:focus-visible + label {
+			outline: 1px dotted;
+			outline-offset: 2px;
+		}
+
+		&[type="text"],
+		&[type="tel"],
+		&[type="email"],
+		&[type="password"] {
+			display: block;
+			padding: 8px;
+			width: 100%;
+		}
+
+		&[type="number"] {
+			appearance: none;
+			border: 2px solid;
+			border-radius: var(--border-radius-input, 0px);
+			display: block;
+			padding: 8px;
+			text-align: right;
+			max-width: 100px;
+			width: 100%;
+
+			/* Chrome, Safari, Edge, Opera */
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+		}
+
+		&[type="checkbox"],
+		&[type="radio"] {
+
+			& + label {
+				align-items: center;
+				border-radius: var(--border-radius-input);
+				display: flex;
+				font-size: em(16px);
+				line-height: em(24px);
+				position: relative;
+				white-space: nowrap;
+
+				&:before {
+					border-width: 2px;
+					border-radius: var(--border-radius-input);
+					content: "";
+					cursor: pointer;
+					display: inline-flex;
+					height: 26px;
+					margin-right: 10px;
+					width: 26px;
+				}
+
+				&:after {
+					background-color: var(--theme-color-button-background);
+					border-radius: calc(var(--border-radius-input) - 2px);
+					color: var(--theme-color-button-font);
+					content: "";
+					height: 18px;
+					left: 4px;
+					opacity: 0;
+					pointer-events: none;
+					position: absolute;
+					text-align: center;
+					top: 4px;
+					width: 18px;
+				}
+			}
+
+			&:checked + label {
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+
+		&[type="radio"] {
+
+			& + label {
+
+				&:after,
+				&:before {
+					border-radius: 100%;
+
+				}
+			}
+		}
+	}
+
+	select {
+		border-radius: var(--border-radius-input, 8px);
+		border-width: var(--border-width, 2px);
+		display: block;
+		font-size: em(16px);
+		padding: 8px;
+		width: 100%;
+
+		&:focus-visible,
+		&:focus-visible + label {
+			outline: 1px dotted;
+			outline-offset: 2px;
+		}
+	}
+
+	.error-wrapper,
+	.success-wrapper {
+		border-left: 4px solid $error;
+		display: flex;
+		padding-left: 10px;
+		outline: 0 none;
+
+		> :first-child {
+			color: $error;
+
+			svg {
+				height: 24px;
+				max-width: 24px;
+				min-width: 24px;
+				margin-right: 10px;
+				width: 24px;
+			}
+
+			span {
+
+			}
+		}
+	}
+}

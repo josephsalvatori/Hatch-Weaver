@@ -1,0 +1,59 @@
+{
+  "id": "html",
+  "type": "SharedSlice",
+  "name": "Html",
+  "description": "Html",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "snippet": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Snippet",
+            "placeholder": "Copy/Paste raw embed snippets",
+            "allowTargetBlank": false,
+            "single": "paragraph"
+          }
+        },
+		"content_max_width": {
+			"type": "Number",
+			"config": {
+			  "label": "Content Max Width (px)",
+			  "placeholder": "Accepts values between 300 and 1600"
+			}
+		  },
+		  "section_padding": {
+			"type": "Select",
+			"config": {
+			  "label": "Section Padding",
+			  "placeholder": "",
+			  "options": [
+				"None",
+				"Top",
+				"Top + Bottom",
+				"Bottom",
+				"Left",
+				"Left + Right",
+				"Right",
+				"No Top",
+				"No Bottom",
+				"All"
+			  ],
+			  "default_value": "None"
+			}
+		  },
+		  "section_background_color": {
+			"type": "Color",
+			"config": { "label": "Section Background Color", "placeholder": "" }
+		  }
+      },
+      "items": {}
+    }
+  ]
+}

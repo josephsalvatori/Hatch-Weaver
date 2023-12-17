@@ -1,0 +1,286 @@
+/**
+ * Core styles
+ */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-size: 16px;
+	font-size: 100%;
+	height: 100%;
+	width: 100%;
+}
+
+body > .body-content {
+	height: 100%;
+	width: 100%;
+}
+
+body > .body-content > * {
+	font-family: $body;
+	font-weight: 400;
+}
+
+main {
+	outline: 0 none;
+}
+
+svg {
+	max-width: 100%;
+	height: auto;
+
+	path {
+		shape-rendering: geometricPrecision;
+	}
+}
+
+.locked-scroll {
+	overflow: hidden;
+	height: 100%;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+/**
+* Notes:
+*	- Most settings within this file are for defaults, and can be overwritten from the CMS.
+*	- Mobile-first syntax regarding responsive nomenclature, and associated screen sizes:
+*		-base: 0+
+*		-xs: 480+
+*		-sm: 640+
+*		-md: 768+
+*		-tb: 769+
+*		-lg: 1024+
+*		-dk: 1025+
+*		-xl: 1280+
+*		-2xl: 1440+
+*		-3xl: 1680+
+*		-4xl: 1920
+*/
+:root {
+
+	/**
+	 * Borders
+	 *	-inner: borders on inner content, like buttons. Default statically defined
+	 *	-input: borders on input form controls. Defaults to inner settings
+	 *	-outer: borders that wrap containers. Defaults to a calculation with --content-gutter variables
+	 */
+	--border-radius-inner-base: var(--settings-border-radius-inner-mobile, 8px);
+	--border-radius-inner-tb: var(--settings-border-radius-inner-tablet, var(--border-radius-inner-base));
+	--border-radius-inner-dk: var(--settings-border-radius-inner-desktop, var(--border-radius-inner-base));
+	--border-radius-input-base: var(--settings-border-radius-input-mobile, var(--border-radius-inner-base));
+	--border-radius-input-tb: var(--settings-border-radius-input-tablet, var(--border-radius-inner-tb));
+	--border-radius-input-dk: var(--settings-border-radius-input-desktop, var(--border-radius-inner-dk));
+	--border-radius-outer-base: var(--settings-border-radius-outer-mobile, calc(var(--border-radius-inner-base) + var(--content-gutter-x-base)));
+	--border-radius-outer-tb: var(--settings-border-radius-outer-tablet, calc(var(--border-radius-inner-tb) + var(--content-gutter-x-tb)));
+	--border-radius-outer-dk: var(--settings-border-radius-outer-desktop, calc(var(--border-radius-inner-dk) + var(--content-gutter-x-dk)));
+
+	/**
+	 * Buttons
+	 *	-max-width: button max width
+	 */
+	--button-max-width-base: var(--settings-button-max-width-mobile, 380px);
+	--button-max-width-tb: var(--settings-button-max-width-tablet, 400px);
+	--button-max-width-dk: var(--settings-button-max-width-desktop, "none");
+
+	/**
+	 * Colors
+	 */
+	--color-input-placeholder: var(--settings-color-input-placeholder, #{$placeholder});
+
+	/**
+	 * Spacing
+	 *	-content-gap-x: horizontal spacing between content boxes
+	 *	-content-gap-y: vertical spacing between content boxes
+	 *	-content-gutter-x: horizontal spacing around content boxes
+	 *	-content-gutter-y: vertical spacing around content boxes
+	 *	-grid-gap-x: spacing between grid columns
+	 *	-grid-gap-y: spacing between grid rows
+	 *	-site-gutter: spacing around site sections
+	 */
+	--content-gap-x-base: var(--settings-content-gap-x-mobile, 16px);
+	--content-gap-x-tb: var(--settings-content-gap-x-tablet, 20px);
+	--content-gap-x-dk: var(--settings-content-gap-x-desktop, 24px);
+	--content-gap-y-base: var(--settings-content-gap-y-mobile, 16px);
+	--content-gap-y-tb: var(--settings-content-gap-y-tablet, 20px);
+	--content-gap-y-dk: var(--settings-content-gap-y-desktop, 24px);
+	--content-gutter-x-base: var(--settings-content-gutter-x-mobile, 20px);
+	--content-gutter-x-tb: var(--settings-content-gutter-x-tablet, 24px);
+	--content-gutter-x-dk: var(--settings-content-gutter-x-desktop, 28px);
+	--content-gutter-y-base: var(--settings-content-gutter-y-mobile, 20px);
+	--content-gutter-y-tb: var(--settings-content-gutter-y-tablet, 24px);
+	--content-gutter-y-dk: var(--settings-content-gutter-y-desktop, 28px);
+	--grid-gap-x-base: var(--settings-grid-gap-x-mobile, 16px);
+	--grid-gap-x-tb: var(--settings-grid-gap-x-tablet, 20px);
+	--grid-gap-x-dk: var(--settings-grid-gap-x-desktop, 24px);
+	--grid-gap-y-base: var(--settings-grid-gap-y-mobile, 16px);
+	--grid-gap-y-tb: var(--settings-grid-gap-y-tablet, 20px);
+	--grid-gap-y-dk: var(--settings-grid-gap-y-desktop, 24px);
+	--site-gutter-x-base: var(--settings-site-gutter-x-mobile, 20px);
+	--site-gutter-x-tb: var(--settings-site-gutter-x-tablet, 40px);
+	--site-gutter-x-dk: var(--settings-site-gutter-x-desktop, 60px);
+	--site-gutter-y-base: var(--settings-site-gutter-y-mobile, 20px);
+	--site-gutter-y-tb: var(--settings-site-gutter-y-tablet, 40px);
+	--site-gutter-y-dk: var(--settings-site-gutter-y-desktop, 60px);
+
+	/**
+	 * Settings
+	 */
+	/* Borders */
+	--border-default-color: var(--border-default, #{$grey});
+	--border-radius: var(--border-radius-outer-base);
+	--border-radius-inner: var(--border-radius-inner-base 8px);
+	--border-radius-input: var(--border-radius-input-base, 6px);
+
+	/* Buttons */
+	--button-max-width: var(--button-max-width-base);
+
+	/* Colors */
+
+	/* Spacing */
+	--content-gap: var(--content-gap-x-base);
+	--content-gap-x: var(--content-gap-x-base);
+	--content-gap-y: var(--content-gap-y-base);
+	--content-gutter: var(--content-gutter-x-base);
+	--content-gutter-x: var(--content-gutter-x-base);
+	--content-gutter-y: var(--content-gutter-y-base);
+	--grid-gap: var(--grid-gap-x-base);
+	--grid-gap-x: var(--grid-gap-x-base);
+	--grid-gap-y: var(--grid-gap-y-base);
+	--site-gutter: var(--site-gutter-x-base);
+	--site-gutter-x: var(--site-gutter-x-base);
+	--site-gutter-y: var(--site-gutter-y-base);
+}
+
+/** Screens 480+ */
+@include screen-min-xs {
+
+	:root {
+
+	}
+}
+
+/** Screens 640+ */
+@include screen-min-sm {
+
+	:root {
+
+	}
+}
+
+/** Screens 768+ */
+@include screen-min-md {
+
+	:root {
+
+	}
+}
+
+/** Screens 769+ (TABLET+) */
+@include screen-min-tb {
+
+	:root {
+		--border-radius: var(--border-radius-outer-tb);
+		--border-radius-inner: var(--border-radius-inner-tb);
+		--border-radius-input: var(--border-radius-input-tb);
+		--border-width: 2px;
+		--button-max-width: var(--button-max-width-tb);
+		--content-gap: var(--content-gap-x-tb);
+		--content-gap-x: var(--content-gap-x-tb);
+		--content-gap-y: var(--content-gap-y-tb);
+		--content-gutter: var(--content-gutter-x-tb);
+		--content-gutter-x: var(--content-gutter-x-tb);
+		--content-gutter-y: var(--content-gutter-y-tb);
+		--grid-gap: var(--grid-gap-x-tb);
+		--grid-gap-x: var(--grid-gap-x-tb);
+		--grid-gap-y: var(--grid-gap-y-tb);
+		--site-gutter: var(--site-gutter-x-tb);
+		--site-gutter-x: var(--site-gutter-x-tb);
+		--site-gutter-y: var(--site-gutter-y-tb);
+	}
+
+	.force-mobile {
+		--border-radius: var(--border-radius-outer-base);
+		--border-radius-inner: var(--border-radius-inner-base);
+		--border-radius-input: var(--border-radius-input-base);
+		--button-max-width: var(--button-max-width-base);
+		--content-gap: var(--content-gap-x-base);
+		--content-gap-x: var(--content-gap-x-base);
+		--content-gap-y: var(--content-gap-y-base);
+		--content-gutter: var(--content-gutter-x-base);
+		--content-gutter-x: var(--content-gutter-x-base);
+		--content-gutter-y: var(--content-gutter-y-base);
+		--grid-gap: var(--grid-gap-x-base);
+		--grid-gap-x: var(--grid-gap-x-base);
+		--grid-gap-y: var(--grid-gap-y-base);
+		--site-gutter: var(--site-gutter-x-base);
+		--site-gutter-x: var(--site-gutter-x-base);
+		--site-gutter-y: var(--site-gutter-y-base);
+	}
+}
+
+/** Screens 1024+ */
+@include screen-min-lg {
+
+	:root {
+
+	}
+}
+
+/** Screens 1025+ (DESKTOP+) */
+@include screen-min-dk {
+
+	:root {
+		--border-radius: var(--border-radius-outer-dk);
+		--border-radius-inner: var(--border-radius-inner-dk);
+		--border-radius-input: var(--border-radius-input-dk);
+		--button-max-width: var(--button-max-width-dk);
+		--content-gap: var(--content-gap-x-dk);
+		--content-gap-x: var(--content-gap-x-dk);
+		--content-gap-y: var(--content-gap-y-dk);
+		--content-gutter: var(--content-gutter-x-dk);
+		--content-gutter-x: var(--content-gutter-x-dk);
+		--content-gutter-y: var(--content-gutter-y-dk);
+		--grid-gap: var(--grid-gap-x-dk);
+		--grid-gap-x: var(--grid-gap-x-dk);
+		--grid-gap-y: var(--grid-gap-y-dk);
+		--site-gutter: var(--site-gutter-x-dk);
+		--site-gutter-x: var(--site-gutter-x-dk);
+		--site-gutter-y: var(--site-gutter-y-dk);
+	}
+}
+
+/** Screens 1280+ */
+@include screen-min-xl {
+
+	:root {
+
+	}
+}
+
+/** Screens 1440+ */
+@include screen-min-2xl {
+
+	:root {
+
+	}
+}
+
+/** Screens 1680+ */
+@include screen-min-3xl {
+
+	:root {
+
+	}
+}
+
+/** Screens 1920+ */
+@include screen-min-4xl {
+
+	:root {
+
+	}
+}

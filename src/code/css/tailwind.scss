@@ -1,0 +1,32 @@
+/* stylelint-disable selector-class-pattern, at-rule-no-unknown */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+
+	/** Colors */
+	.theme-color-base {
+		@apply bg-theme-base-background text-theme-base-font;
+	}
+
+	.theme-color-base-reverse {
+		@apply bg-theme-base-font text-theme-base-background;
+	}
+
+	.theme-button {
+		@apply bg-theme-button-background text-theme-button-font;
+	}
+
+	.theme-button-reverse {
+		@apply bg-theme-button-font text-theme-button-background;
+	}
+}

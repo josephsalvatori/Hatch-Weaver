@@ -1,0 +1,502 @@
+$easeIn: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$easeOut: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+a,
+button {
+
+	&.btn,
+	&.btn-inherit,
+	&.btn-inherit-reverse,
+	&.btn-reverse,
+	&.btn-secondary,
+	&.btn-secondary-reverse {
+		align-items: center;
+		border-radius: var(--border-radius-inner, 8px);
+		border-style: solid;
+		border-width: var(--border-width, 2px);
+		display: inline-flex;
+		font-family: var(--font-body);
+		font-size: em(16px);
+		font-weight: 700;
+		justify-content: center;
+		line-height: 1;
+		max-width: var(--button-max-width, "none");
+		padding: 24px 48px;
+		white-space: nowrap;
+
+		&:focus-visible {
+			outline: 1px dotted;
+			outline-offset: -6px;
+		}
+
+		& > :last-child {
+			margin-left: var(--content-gap, 16px);
+		}
+
+		& > :first-child {
+			margin: 0 !important;
+		}
+	}
+
+	/** Primary ~ Default */
+	&.btn {
+		background-color: var(--theme-color-button-background);
+		border-color: var(--theme-color-button-background);
+		color: var(--theme-color-button-font);
+
+		&:focus-visible,
+		&:hover {
+			background-color: var(--theme-color-button-font);
+			border-color: var(--theme-color-button-background);
+			color: var(--theme-color-button-background);
+		}
+	}
+
+	/** Primary ~ Reverse */
+	&.btn-reverse {
+		background-color: var(--theme-color-button-accent);
+		border-color: var(--theme-color-button-accent);
+		color: var(--theme-color-button-font);
+
+		&:focus-visible,
+		&:hover {
+			background-color: var(--theme-color-button-font);
+			border-color: var(--theme-color-button-accent);
+			color: var(--theme-color-button-accent);
+		}
+	}
+
+	/** Secondary ~ Default */
+	&.btn-secondary {
+		background-color: var(--theme-color-button-background);
+		border-color: var(--theme-color-button-background);
+		color: var(--theme-color-button-font);
+
+		&:focus-visible,
+		&:hover {
+			background-color: var(--theme-color-button-font);
+			border-color: var(--theme-color-button-background);
+			color: var(--theme-color-button-background);
+		}
+	}
+
+	/** Secondary ~ Reverse */
+	&.btn-secondary-reverse {
+		background-color: var(--theme-color-button-accent);
+		border-color: var(--theme-color-button-accent);
+		color: var(--theme-color-button-font);
+
+		&:focus-visible,
+		&:hover {
+			background-color: var(--theme-color-button-font);
+			border-color: var(--theme-color-button-accent);
+			color: var(--theme-color-button-accent);
+		}
+	}
+
+	/** Inherited from parent */
+	&.btn-inherit {
+		background-color: var(--content-color, var(--theme-color-button-background));
+		border-color: var(--content-color, var(--theme-color-button-background));
+		color: var(--background-color, var(--theme-color-button-font));
+
+		&:focus-visible,
+		&:hover {
+			background-color: var(--background-color, var(--theme-color-button-font));
+			border-color: var(--content-color, var(--theme-color-button-background));
+			color: var(--content-color, var(--theme-color-button-background));
+		}
+	}
+
+	/** Inherited from parent ~ Reverse */
+	&.btn-inherit-reverse {
+		background-color: var(--background-color, var(--theme-color-button-background));
+		border-color: var(--content-color, var(--theme-color-button-background));
+		color: var(--content-color, var(--theme-color-button-font));
+
+		&:focus-visible,
+		&:hover {
+			background-color: var(--content-color, var(--theme-color-button-font));
+			border-color: var(--content-color, var(--theme-color-button-background));
+			color: var(--background-color, var(--theme-color-button-background));
+		}
+	}
+
+	/** Text */
+	&.btn-text {
+		text-decoration: underline;
+		white-space: nowrap;
+
+		&:focus-visible {
+			outline: 1px dotted;
+			outline-offset: 4px;
+		}
+	}
+
+	/** Input */
+	&.btn-input {
+
+		& {
+			&:focus-visible,
+			&:focus-visible + label {
+				outline: 1px dotted;
+				outline-offset: -4px;
+			}
+
+			&:checked + label {
+				background-color: var(--theme-color-button-background);
+				border-color: var(--theme-color-button-background);
+				color: var(--theme-color-button-font);
+			}
+		}
+
+		&,
+		& + label {
+			align-items: center;
+			background-color: var(--theme-color-button-font);
+			border: 2px solid var(--theme-color-button-background);
+			border-radius: var(--border-radius-input, 6px);
+			box-sizing: content-box;
+			color: var(--theme-color-button-background);
+			cursor: pointer;
+			display: flex;
+			font-size: 14px;
+			letter-spacing: 0;
+			line-height: 1;
+			justify-content: center;
+			margin: 0;
+			min-height: 28px;
+			min-width: 20px;
+			padding: 4px 8px;
+
+			&:hover {
+				background-color: var(--theme-color-button-background);
+				border-color: var(--theme-color-button-background);
+				color: var(--theme-color-button-font);
+			}
+
+			&:focus-visible,
+			&:focus-visible + label span:nth-child(1) {
+				outline: 1px dotted;
+				outline-offset: -4px;
+			}
+
+			svg {
+				min-height: 20px;
+				min-width: 20px;
+			}
+		}
+	}
+
+	/** Select */
+	&.btn-select {
+		position: relative;
+
+		.icon {
+			pointer-events: none;
+			position: absolute;
+			right: 8px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		select {
+			appearance: none;
+			background-color: var(--theme-color-background);
+			border: 2px solid var(--theme-color-font);
+			border-radius: var(--border-radius-input, 6px);
+			box-sizing: border-box;
+			color: var(--theme-color-font);
+			padding: 8px 28px 8px 8px;
+
+			&:focus-visible,
+			&:focus-visible + label {
+				outline: 1px dotted;
+				outline-offset: -4px;
+			}
+
+			// @include desktop {
+			// 	height: 64px;
+			// }
+		}
+	}
+
+	/** Icon */
+	&.btn-icon {
+		align-items: center;
+		aspect-ratio: 1/1;
+		border-radius: var(--border-radius-input, 8px);
+		display: inline-flex;
+		justify-content: center;
+		min-height: 30px;
+		min-width: 30px;
+		padding: 4px;
+
+		svg {
+
+		}
+
+		// TODO: Does this button need a hover?
+		&:hover {
+
+			svg {
+
+			}
+		}
+
+		&:focus-visible {
+			outline: 1px dotted;
+			outline-offset: 4px;
+		}
+
+		// TODO: Active page link styles?
+		&.is-page {
+
+		}
+	}
+
+	/** Option */
+	&.btn-option {
+
+		input {
+
+			&:focus-visible {
+
+				& + label {
+					outline: 1px dotted;
+					outline-offset: 2px;
+				}
+			}
+		}
+
+		input + label {
+			background-color: var(--theme-color-button-font);
+			border: 2px solid var(--theme-color-button-background);
+			border-radius: var(--border-radius-input, 8px);
+			cursor: pointer;
+			display: inline-flex;
+			min-width: 40px;
+			padding: 6px 10px;
+			justify-content: center;
+
+			&:before,
+			&:after {
+				display: none !important;
+			}
+
+			&:hover {
+				background-color: var(--theme-color-button-background);
+				color: var(--theme-color-button-font);
+			}
+		}
+
+		input:checked + label {
+			background-color: var(--theme-color-button-background);
+			color: var(--theme-color-button-font);
+		}
+	}
+
+	/** Material */
+	&.btn-material {
+		background-color: transparent;
+		cursor: pointer;
+		display: inline-flex;
+		font-size: 15px;
+		font-weight: 600;
+		outline: 0 none;
+		position: relative;
+
+		& > span {
+			background-color: var(--theme-color-button-font);
+			border: 2px solid var(--theme-color-button-background);
+			border-radius: var(--border-radius-input);
+			color: var(--theme-color-button-background);
+			display: inline-flex;
+			padding: 8px 10px;
+			position: relative;
+			text-align: center;
+			transition: transform 50ms ease-in-out;
+			width: auto;
+			z-index: 2;
+
+			&:nth-child(2) {
+				height: 100%;
+				left: 0;
+				position: absolute;
+				top: 0;
+				transform: translateX(4px) translateY(4px);
+				width: 100%;
+				z-index: 1;
+			}
+		}
+
+		&:focus-visible {
+			outline: 0 none;
+
+			span:nth-child(1) {
+				outline: 1px dotted;
+				outline-offset: -4px;
+			}
+		}
+
+		&:hover,
+		&:active,
+		&.is-page {
+
+			span:nth-child(1) {
+				background-color: var(--theme-color-button-background);
+				color: var(--theme-color-button-font);
+			}
+		}
+
+		&:active,
+		&.is-page {
+
+			span:nth-child(1) {
+				transform: translateX(4px) translateY(4px);
+			}
+
+			span:nth-child(2) {
+
+			}
+		}
+	}
+
+	/** Pill */
+	&.btn-pill {
+		background-color: var(--theme-color-button-background);
+		border: 2px solid var(--theme-color-button-background);
+		border-radius: var(--border-radius-input, 8px);
+		color: var(--theme-color-button-font);
+		padding: 2px 8px;
+	}
+
+	/** Nav */
+	&.btn-nav {
+		border-radius: var(--border-radius-inner, 8px);
+
+		&:hover {
+
+		}
+
+		&:focus-visible {
+
+		}
+
+		// TODO: Active page link styles?
+		&.is-active {
+
+		}
+	}
+
+	/** Circle */
+	&.btn-circle {
+		background-color: var(--theme-color-background);
+		border-color: var(--theme-color-font);
+		color: var(--theme-color-font);
+		border: 2px solid currentColor;
+		border-radius: 100%;
+		display: block;
+		padding: 5px;
+
+		&:active,
+		&:focus-visible,
+		&:hover,
+		&.is-active {
+			background-color: var(--theme-color-font);
+			border-color: var(--theme-color-font);
+			color: var(--theme-color-background);
+		}
+
+		&:focus-visible {
+			outline: 1px dotted;
+			outline-offset: -4px;
+		}
+	}
+
+	/** Hamburger */
+	&.btn-hamburger {
+		height: 30px;
+
+		&:focus-visible {
+			outline: 1px dotted;
+			outline-offset: 4px;
+		}
+
+		> span {
+			width: 30px;
+			height: 26px;
+			display: inline-block;
+			position: relative;
+
+			> span {
+				display: block;
+				top: 50%;
+				margin-top: 4px / -2;
+				transition-duration: 0.075s;
+				transition-timing-function: $easeIn;
+
+				&,
+				&::before,
+				&::after {
+					width: 30px;
+					height: 4px;
+					background-color: var(--theme-primary-background);
+					border-radius: 4px;
+					position: absolute;
+					transition-property: transform;
+					transition-duration: 0.15s;
+					transition-timing-function: ease;
+				}
+
+				&::before,
+				&::after {
+					content: "";
+					display: block;
+				}
+
+				&::before {
+					top: -10px;
+					transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+				}
+
+				&::after {
+					bottom: -10px;
+					transition: bottom 0.075s 0.12s ease,
+					transform 0.075s $easeIn;
+				}
+			}
+		}
+
+		&.is-active {
+
+			> span {
+
+				> span {
+					transform: rotate(45deg);
+					transition-delay: 0.12s;
+					transition-timing-function: $easeOut;
+
+					&,
+					&::before,
+					&::after {
+						background-color: var(--theme-color-button-font);
+					}
+
+					&::before {
+						top: 0;
+						opacity: 0;
+						transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+					}
+
+					&::after {
+						bottom: 0;
+						transform: rotate(-90deg);
+						transition: bottom 0.075s ease,
+						transform 0.075s 0.12s $easeOut;
+					}
+				}
+			}
+		}
+	}
+}

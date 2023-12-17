@@ -1,0 +1,129 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"marquee_speed": {
+				"__TYPE__": "FieldContent",
+				"value": "28",
+				"type": "Number"
+			},
+			"marquee_pause_on_hover": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"content_vertical_padding": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"marquee_row",
+						{
+							"__TYPE__": "StructuredTextContent",
+							"value": [
+								{
+									"type": "paragraph",
+									"content": {
+										"text": "Ex est aliquip magna minim sit pariatur sint velit nisi. In incididunt aliquip ea ipsum amet officia mollit aute officia tempor laborum. Dolore reprehenderit Lorem proident culpa laboris."
+									}
+								}
+							]
+						}
+					],
+					[
+						"marquee_row_background_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#e37f43",
+							"type": "Color"
+						}
+					],
+					[
+						"marquee_row_font_color",
+						{
+							"__TYPE__": "FieldContent",
+							"value": "#834700",
+							"type": "Color"
+						}
+					]
+				]
+			}
+		]
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "images",
+		"primary": {
+			"marquee_pause_on_hover": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"marquee_direction": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"marquee_speed": {
+				"__TYPE__": "FieldContent",
+				"value": "29",
+				"type": "Number"
+			},
+			"section_padding": {
+				"__TYPE__": "FieldContent",
+				"value": "None",
+				"type": "Select"
+			},
+			"section_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#623427",
+				"type": "Color"
+			},
+			"content_vertical_padding": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"marquee_max_height": {
+				"__TYPE__": "FieldContent",
+				"value": "34",
+				"type": "Number"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": [
+					[
+						"marquee_image",
+						{
+							"origin": {
+								"id": "main",
+								"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+								"width": 4000,
+								"height": 4000
+							},
+							"url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da",
+							"width": 4000,
+							"height": 4000,
+							"edit": {
+								"zoom": 1,
+								"crop": {
+									"x": 0,
+									"y": 0
+								},
+								"background": "transparent"
+							},
+							"credits": null,
+							"alt": null,
+							"__TYPE__": "ImageContent",
+							"thumbnails": {}
+						}
+					]
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,54 @@
+{
+	"id": "mock",
+	"uid": "this-article-will-404",
+	"url": "/articles/news/this-article-will-404/",
+	"type": "article",
+	"tags": [],
+	"first_publication_date": "2023-08-30T15:23:03+0000",
+	"last_publication_date": "2023-08-30T15:23:03+0000",
+	"slugs": [
+		"this-article-will-404"
+	],
+	"lang": "en-us",
+	"alternate_languages": [],
+	"data": {
+		"title": [
+			{
+				"type": "heading4",
+				"text": "Lorem Ipsum Dolor Sit Amet",
+				"spans": []
+			}
+		],
+		"image": {
+			"dimensions": {
+				"width": 1440,
+				"height": 1785
+			},
+			"alt": null,
+			"copyright": null,
+			"url": "https://images.prismic.io/zero-starter/55e1716e-036c-4ec5-8234-fc5b3934393b_everyday.tay_2800x.jpg?auto=compress,format"
+		},
+		"category": {
+			"type": "category",
+			"lang": "en-us",
+			"slug": "news",
+			"first_publication_date": "2023-08-30T15:16:21+0000",
+			"last_publication_date": "2023-08-30T15:16:21+0000",
+			"uid": "news",
+			"url": "/articles/news/",
+			"link_type": "Document",
+			"isBroken": false
+		},
+		"content": [
+			{
+				"type": "paragraph",
+				"text": "Consectetur adipiscing elit. Integer quis elit ac odio viverra pharetra. Aenean tincidunt massa magna, eu maximus erat laoreet id. Aliquam vulputate hendrerit dui vitae ultrices. Pellentesque fermentum lorem eget vulputate imperdiet. Curabitur sed nisl varius, placerat neque gravida, vulputate lectus. Ut interdum elit elit, ac facilisis turpis viverra vel. Fusce mollis velit ac leo mattis malesuada. Nullam vel tristique massa. Suspendisse sollicitudin efficitur diam vitae vestibulum.",
+				"spans": []
+			}
+		],
+		"slices": [],
+		"meta_description": "Aenean tincidunt massa magna, eu maximus erat laoreet id. Aliquam vulputate hendrerit dui vitae ultrices.",
+		"meta_image": {},
+		"meta_title": null
+	}
+}

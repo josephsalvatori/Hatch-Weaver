@@ -1,0 +1,124 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"carousel_content": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			},
+			"section": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			},
+			"content_pages": {
+				"__TYPE__": "FieldContent",
+				"value": "31",
+				"type": "Number"
+			},
+			"content_per_page": {
+				"__TYPE__": "FieldContent",
+				"value": "78",
+				"type": "Number"
+			},
+			"column_alignment": {
+				"__TYPE__": "FieldContent",
+				"value": "Fill",
+				"type": "Select"
+			},
+			"content_box_font_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#22455e",
+				"type": "Color"
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "articleRecirculation",
+		"primary": {
+			"eyebrow": {
+				"__TYPE__": "FieldContent",
+				"value": "even",
+				"type": "Text"
+			},
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Eu nostrud ea ad et."
+						}
+					}
+				]
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"button_text": {
+				"__TYPE__": "FieldContent",
+				"value": "silk",
+				"type": "Text"
+			},
+			"content_box_font_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#e70861",
+				"type": "Color"
+			},
+			"section": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "DocumentLink",
+					"id": "mock_document_id"
+				}
+			},
+			"content_pages": {
+				"__TYPE__": "FieldContent",
+				"value": "27",
+				"type": "Number"
+			},
+			"content_per_page": {
+				"__TYPE__": "FieldContent",
+				"value": "42",
+				"type": "Number"
+			},
+			"column_alignment": {
+				"__TYPE__": "FieldContent",
+				"value": "Fill",
+				"type": "Select"
+			},
+			"column_screen": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"section_padding": {
+				"__TYPE__": "FieldContent",
+				"value": "All",
+				"type": "Select"
+			},
+			"section_background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "#de8bc1",
+				"type": "Color"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]
