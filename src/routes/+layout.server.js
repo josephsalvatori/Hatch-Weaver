@@ -55,9 +55,16 @@ export async function load({ cookies, locals, fetch, params, request, url }) {
 		});
 
 		brandObj = {
-			"--theme-color-background": serverStore?.settings?.data?.theme_background || "#FFFFFF",
-			"--theme-color-accent": serverStore?.settings?.data?.theme_accent || "#000000",
-			"--theme-color-font": serverStore?.settings?.data?.theme_font || "#222222",
+			"--theme-color-background": serverStore?.settings?.data?.brand_background_1 || "#232F3B",
+			"--theme-color-background-alt": serverStore?.settings?.data?.brand_background_2 || "#212120",
+			"--theme-color-font": serverStore?.settings?.data?.brand_text_1 || "#E4E4E4",
+			"--theme-color-font-alt": serverStore?.settings?.data?.brand_text_2 || "#FEFEFE",
+			"--theme-color-accent-1": serverStore?.settings?.data?.brand_accent_1 || "#232F3B",
+			"--theme-color-accent-2": serverStore?.settings?.data?.brand_accent_2 || "#384F55",
+			"--theme-color-accent-3": serverStore?.settings?.data?.brand_accent_3 || "#8B9DA0",
+			"--theme-color-accent-4": serverStore?.settings?.data?.brand_accent_4 || "#8A5033",
+			"--theme-color-accent-5": serverStore?.settings?.data?.brand_accent_5 || "#C39F87",
+			"--theme-color-accent-6": serverStore?.settings?.data?.brand_accent_6 || "#E4E4E4",
 			"--theme-color-button-background": serverStore?.settings?.data?.theme_button_background || "#222222",
 			"--theme-color-button-accent": serverStore?.settings?.data?.theme_button_accent || "#000000",
 			"--theme-color-button-font": serverStore?.settings?.data?.theme_button_font || "#FFFFFF",

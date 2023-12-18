@@ -26,6 +26,18 @@ export const refs = {
 		"option": "btn-option",
 		"material": "btn-material"
 	},
+	colors: {
+		"text-1": "var(--color-brand-text)",
+		"text-2": "var(--color-brand-text-alt)",
+		"background-1": "var(--color-brand-background)",
+		"background-2": "var(--color-brand-background-alt)",
+		"accent-1": "var(--color-brand-accent-1)",
+		"accent-2": "var(--color-brand-accent-2)",
+		"accent-3": "var(--color-brand-accent-3)",
+		"accent-4": "var(--color-brand-accent-4)",
+		"accent-5": "var(--color-brand-accent-5)",
+		"accent-6": "var(--color-brand-accent-6)"
+	},
 	months: {
 		"1": "Jan",
 		"2": "Feb",

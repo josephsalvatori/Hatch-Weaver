@@ -3,6 +3,8 @@ import inview from "$lib/stores/observer";
 import Accordion from "$lib/components/slots/Accordion.svelte";
 import { asHTML, isFilled } from "@prismicio/helpers";
 import { staggerFade } from "$js/_helpers/animation";
+import { refs } from "$js/_helpers/refs";
+import { slugify } from "$js/_helpers/slugify";
 
 /**
  * A description
@@ -30,8 +32,8 @@ let elWidth = 0;
 /** Content */
 let eyebrow = data?.eyebrow || null;
 let content = data?.content || [];
-let contentBoxFontColor = data?.content_box_font_color || null;
-let contentBoxBackgroundColor = data?.content_box_background_color || null;
+let contentBoxFontColor = (data?.content_box_font_color) ? refs.colors[slugify(data.content_box_font_color)] : null;
+let contentBoxBackgroundColor = (data?.content_box_background_color) ? refs.colors[slugify(data.content_box_background_color)] : null;
 let contentBoxTextJustification = data?.content_box_text_justification || "Left";
 let contentBoxHorizontal = data?.content_box_horizontal || "Left";
 let contentBoxVertical = data?.content_box_vertical || "Top";

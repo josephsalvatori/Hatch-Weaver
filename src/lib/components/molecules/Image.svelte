@@ -23,6 +23,8 @@ export let width = 2048;
 export let type = "responsive";
 export let placeholder = true;
 
+position = position.toLowerCase();
+
 /** Settings */
 let el;
 let widths = [20, 200, 400, 800, 1200, 1600, 1880];

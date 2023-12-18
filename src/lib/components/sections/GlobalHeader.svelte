@@ -12,6 +12,8 @@ import Drawer from "$lib/components/slots/Drawer.svelte";
 import { context } from "$lib/stores/storage";
 import { user } from "$lib/stores/user";
 import { asLink, asText, isFilled } from "@prismicio/client";
+import { refs } from "$js/_helpers/refs";
+import { slugify } from "$js/_helpers/slugify";
 
 let windowWidth = 0;
 let noticeHeight = 0;
@@ -20,6 +22,10 @@ let cartWidth = 0;
 let searchWidth = 0;
 let drawerOpen = false;
 let drawerWidth = 0;
+
+
+let contentFontColor = ($page.data.settings.navigation?.navigation_font_color) ? refs.colors[slugify($page.data.settings.navigation.navigation_font_color)] : "var(--color-brand-text)";
+let contentBackgroundColor = ($page.data.settings.navigation?.navigation_background_color) ? refs.colors[slugify($page.data.settings.navigation.navigation_background_color)] : "var(--color-brand-background)";
 
 beforeNavigate(() => {
 	drawerOpen = false;
@@ -32,7 +38,7 @@ beforeNavigate(() => {
 	<div class="h-[calc(var(--header-height)_+_var(--notice-height))]"></div>
 	{#if windowWidth > 0}
 		<nav aria-label="Main Navigation" class="">
-			<div class="bg-[var(--theme-color-background)] border-b-2 cx flex fixed h-[60px] min-h-[60px] items-center justify-between left-0 top-0 w-full z-[81]">
+			<div class="bg-[var(--background-color)] text-[color:var(--text-color)] border-b-2 cx flex fixed h-[60px] min-h-[60px] items-center justify-between left-0 top-0 w-full z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
 				{#if windowWidth <= 768}
 					<button type="button" class="btn-hamburger {(drawerOpen) ? "is-active" : ""} relative z-[90]" on:keydown={() => {}} on:click|preventDefault={() => { drawerOpen = !drawerOpen; }}>
 						<span>

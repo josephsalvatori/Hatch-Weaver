@@ -5,6 +5,8 @@ import Carousel from "$lib/components/slots/Carousel.svelte";
 import SliceSwitch from "$lib/components/utilities/SliceSwitch.svelte";
 import { asHTML, isFilled } from "@prismicio/helpers";
 import { staggerFade } from "$js/_helpers/animation";
+import { refs } from "$js/_helpers/refs";
+import { slugify } from "$js/_helpers/slugify";
 
 /**
  * Slice
@@ -31,7 +33,8 @@ let buttonLink = data?.button_link?.url || null;
 let buttonStyle = data?.button_style || "";
 let buttonText = data?.button_text || "Learn More";
 let content = data?.content || [];
-let contentBoxFontColor = data?.content_box_font_color || null;
+let contentBoxFontColor = (data?.content_box_font_color) ? refs.colors[slugify(data.content_box_font_color)] : null;
+let contentBoxBackgroundColor = (data?.content_box_background_color) ? refs.colors[slugify(data.content_box_background_color)] : null;
 let contentBoxTextJustification = data?.content_box_text_justification || "Left";
 let contentFlex = data?.section?.data?.slices || [];
 let contentMaxWidth = data?.content_max_width;

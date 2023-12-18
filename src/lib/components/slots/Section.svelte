@@ -7,6 +7,10 @@ export let type = "";
 
 let sectionPadding = props?.data?.section_padding || props?.data?.section?.data?.section_padding || "None";
 let sectionBackground = props?.data?.section_background_color || props?.data?.section?.data?.section_background_color || null;
+
+if(sectionBackground) {
+	sectionBackground = refs.colors[slugify(sectionBackground)];
+}
 </script>
 
 <template>
@@ -19,24 +23,14 @@ let sectionBackground = props?.data?.section_background_color || props?.data?.se
 :global(.slice-section) {
 	min-height: 100%;
 	position: relative;
-
-	&:empty {
-		display: none;
-	}
 }
 
-:global(.group-section) {
+:global(.slice-section:empty),
+:global(.group-section:empty) {
+	display: none;
+}
 
-	&:empty {
-		display: none;
-	}
-
-	// Section has gaps
-	.grid-gap {
-
-		.slice-section {
-			border-radius: var(--border-radius);
-		}
-	}
+:global(.group-section .grid-gap .slice-section) {
+	border-radius: var(--border-radius);
 }
 </style>

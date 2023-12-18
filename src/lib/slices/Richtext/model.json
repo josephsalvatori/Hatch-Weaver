@@ -112,10 +112,22 @@
           }
         },
         "content_box_font_color": {
-          "type": "Color",
+          "type": "Select",
           "config": {
             "label": "Section Font Color",
-            "placeholder": ""
+            "placeholder": "",
+			"options": [
+				"Text 1",
+				"Text 2",
+				"Background 1",
+				"Background 2",
+				"Accent 1",
+				"Accent 2",
+				"Accent 3",
+				"Accent 4",
+				"Accent 5",
+				"Accent 6"
+			]
           }
         },
         "section_padding": {
@@ -139,11 +151,23 @@
           }
         },
         "section_background_color": {
-          "type": "Color",
-          "config": {
-            "label": "Section Background Color",
-            "placeholder": ""
-          }
+			"type": "Select",
+			"config": {
+			  "label": "Section Background Color",
+			  "placeholder": "",
+			  "options": [
+				  "Text 1",
+				  "Text 2",
+				  "Background 1",
+				  "Background 2",
+				  "Accent 1",
+				  "Accent 2",
+				  "Accent 3",
+				  "Accent 4",
+				  "Accent 5",
+				  "Accent 6"
+			  ]
+			}
         }
       },
       "items": {}

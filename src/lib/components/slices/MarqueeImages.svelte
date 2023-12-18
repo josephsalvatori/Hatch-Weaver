@@ -4,6 +4,8 @@ import Image from "$lib/components/molecules/Image.svelte";
 import Marquee from "$lib/components/slots/Marquee.svelte";
 import { isFilled } from "@prismicio/helpers";
 import { staggerFade } from "$js/_helpers/animation";
+import { refs } from "$js/_helpers/refs";
+import { slugify } from "$js/_helpers/slugify";
 
 /**
  * A description
@@ -26,7 +28,7 @@ let inViewChange = ({ detail }) => isInView = detail?.inView;
 let inViewAnimate = ({ detail }) => animation.run();
 
 /** Content */
-let contentBoxFontColor = data?.content_box_font_color || null;
+let contentBoxFontColor = (data?.content_box_font_color) ? refs.colors[slugify(data.content_box_font_color)] : null;
 let contentVerticalPadding = data?.content_vertical_padding || true;
 
 /** Marquee */

@@ -269,27 +269,76 @@
           "placeholder": ""
         }
       },
-      "theme_background": {
-        "type": "Color",
-        "config": {
-          "label": "Theme Background",
-          "placeholder": ""
-        }
-      },
-      "theme_accent": {
-        "type": "Color",
-        "config": {
-          "label": "Theme Accent",
-          "placeholder": ""
-        }
-      },
-      "theme_font": {
-        "type": "Color",
-        "config": {
-          "label": "Theme Font",
-          "placeholder": ""
-        }
-      },
+	  "brand_background_1": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Background 1",
+			"placeholder": ""
+		}
+	  },
+	  "brand_background_2": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Background 2",
+			"placeholder": ""
+		}
+	  },
+	  "brand_text_1": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Text Color 1",
+			"placeholder": ""
+		}
+	  },
+	  "brand_text_2": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Text Color 2",
+			"placeholder": ""
+		}
+	  },
+	  "brand_accent_1": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Accent 1",
+			"placeholder": ""
+		}
+	  },
+	  "brand_accent_2": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Accent 2",
+			"placeholder": ""
+		}
+	  },
+	  "brand_accent_3": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Accent 3",
+			"placeholder": ""
+		}
+	  },
+	  "brand_accent_4": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Accent 4",
+			"placeholder": ""
+		}
+	  },
+	  "brand_accent_5": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Accent 5",
+			"placeholder": ""
+		}
+	  },
+	  "brand_accent_6": {
+		"type": "Color",
+		"config": {
+			"label": "Brand Accent 6",
+			"placeholder": ""
+		}
+	  },
       "theme_button_background": {
         "type": "Color",
         "config": {

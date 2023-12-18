@@ -90,6 +90,17 @@ svg {
 	 * Colors
 	 */
 	--color-input-placeholder: var(--settings-color-input-placeholder, #{$placeholder});
+	--color-brand-text: var(--theme-color-font, #{$hwText});
+	--color-brand-text-alt: var(--theme-color-font-alt, #{$hwText2});
+	--color-brand-background: var(--theme-color-background, #{$hwTextBg});
+	--color-brand-background-alt: var(--theme-color-background-alt, #{$hwTextBg2});
+	--color-brand-accent-1: var(--theme-color-accent-1, #{$hwAccent1});
+	--color-brand-accent-2: var(--theme-color-accent-2, #{$hwAccent2});
+	--color-brand-accent-3: var(--theme-color-accent-3, #{$hwAccent3});
+	--color-brand-accent-4: var(--theme-color-accent-4, #{$hwAccent4});
+	--color-brand-accent-5: var(--theme-color-accent-5, #{$hwAccent5});
+	--color-brand-accent-6: var(--theme-color-accent-6, #{$hwAccent6});
+	--color-brand-link: var(--theme-color-accent-5, #{$hwLink});
 
 	/**
 	 * Spacing
