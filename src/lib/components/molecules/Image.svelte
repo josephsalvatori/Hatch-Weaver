@@ -14,6 +14,7 @@ import { processImages } from "$js/_helpers/image";
 export let alt = "";
 export let breakpoint = 768;
 export let fit = "cover";
+export let position = "center";
 export let height = null;
 export let sizes = "100vw"; // should this null or default?
 export let src; // string or object?
@@ -61,13 +62,13 @@ onMount(() => {
 
 {#if src}
 	{#if src.indexOf(".svg") > -1 || type !== "responsive" || processedImages.set.length <= 0}
-		<div bind:this={el} bind:clientWidth={elWidth} class="{(fit === "cover") ? "object-cover w-full h-full absolute object-center z-0" : "max-w-full"} {(fit === "contain") ? "object-contain w-full h-full absolute object-center z-0" : ""}">
-			<img alt={alt} class="lazy {(fit === "cover") ? "object-cover w-full h-full absolute object-center z-0" : ""} {(fit === "contain") ? "object-contain w-full h-full absolute object-center z-0" : ""}" width={width} height={height} data-src={processedImages.base} />
+		<div bind:this={el} bind:clientWidth={elWidth} class="{(fit === "cover") ? "object-cover w-full h-full absolute z-0" : "max-w-full"} {(fit === "contain") ? "object-contain w-full h-full absolute z-0" : ""} {(position === "center" ? "object-center" : (position === "bottom" ? "object-bottom" : "object-top"))}">
+			<img alt={alt} class="lazy {(fit === "cover") ? "object-cover w-full h-full absolute z-0" : ""} {(fit === "contain") ? "object-contain w-full h-full absolute z-0" : ""} {(position === "center" ? "object-center" : (position === "bottom" ? "object-bottom" : "object-top"))}" width={width} height={height} data-src={processedImages.base} />
 		</div>
 	{:else}
-		<picture bind:this={el} bind:clientWidth={elWidth} class="{(fit === "cover") ? "object-cover w-full h-full absolute top-0 left-0 object-center z-0" : "max-w-full"} {(fit === "contain") ? "object-contain w-full h-full absolute object-center z-0" : ""}">
+		<picture bind:this={el} bind:clientWidth={elWidth} class="{(fit === "cover") ? "object-cover w-full h-full absolute top-0 left-0 z-0" : "max-w-full"} {(fit === "contain") ? "object-contain w-full h-full absolute z-0" : ""} {(position === "center" ? "object-center" : (position === "bottom" ? "object-bottom" : "object-top"))}">
 			<source data-srcset={processedImages.set} sizes={sizes} />
-			<img alt={alt} class="lazy {(fit === "cover") ? "object-cover w-full h-full absolute object-center z-0" : ""} {(fit === "contain") ? "object-contain w-full h-full absolute object-center z-0" : ""}" src={(placeholder === true && processedImages.placeholder) ? processedImages.placeholder : null} width={width} height={height} data-src={processedImages.base} />
+			<img alt={alt} class="lazy {(fit === "cover") ? "object-cover w-full h-full absolute z-0" : ""} {(fit === "contain") ? "object-contain w-full h-full absolute z-0" : ""} {(position === "center" ? "object-center" : (position === "bottom" ? "object-bottom" : "object-top"))}" src={(placeholder === true && processedImages.placeholder) ? processedImages.placeholder : null} width={width} height={height} data-src={processedImages.base} />
 		</picture>
 	{/if}
 {/if}

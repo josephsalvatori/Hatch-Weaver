@@ -55,6 +55,19 @@
             "default_value": "Cover"
           }
         },
+		"media_position": {
+			"type": "Select",
+			"config": {
+				"label": "Media Position",
+				"placeholder": "",
+				"options": [
+					"Top",
+					"Center",
+					"Right"
+				],
+				"default_value": "Center"
+			}
+		},
         "media_aspect_ratio": {
           "type": "Select",
           "config": {
@@ -270,6 +283,19 @@
             "default_value": "Cover"
           }
         },
+		"media_position": {
+			"type": "Select",
+			"config": {
+				"label": "Media Position",
+				"placeholder": "",
+				"options": [
+					"Top",
+					"Center",
+					"Right"
+				],
+				"default_value": "Center"
+			}
+		},
         "media_aspect_ratio": {
           "type": "Select",
           "config": {
@@ -495,6 +521,19 @@
             "default_value": "Cover"
           }
         },
+		"media_position": {
+			"type": "Select",
+			"config": {
+				"label": "Media Position",
+				"placeholder": "",
+				"options": [
+					"Top",
+					"Center",
+					"Right"
+				],
+				"default_value": "Center"
+			}
+		},
         "media_aspect_ratio": {
           "type": "Select",
           "config": {

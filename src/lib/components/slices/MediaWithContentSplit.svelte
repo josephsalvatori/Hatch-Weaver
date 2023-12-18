@@ -54,6 +54,7 @@ let image = (data?.image?.url) ? data.image : null;
 let video = (data?.video?.url) ? data.video : null;
 let videoPlayback = data?.video_playback || undefined;
 let mediaFit = data?.media_fit || "Cover";
+let mediaPosition = data?.media_position || "Center";
 let mediaAspectRatio = (data?.media_aspect_ratio) ? data.media_aspect_ratio.toLowerCase() : "none";
 let mediaRoundCorners = data?.media_round_corners || false;
 let mediaHeight = image?.dimensions?.height || video?.dimensions?.height || 1000;
@@ -80,7 +81,7 @@ $: if(mediaAspectRatio !== "none") {
 				<Video src={video.url.replace("http://", "https://")} fit={mediaFit.toLowerCase()} playback={videoPlayback} />
 			{/if}
 			{#if image && !video}
-				<Image src={image.url} fit={mediaFit.toLowerCase()} height={image.dimensions.height} width={image.dimensions.width} alt={image.alt} />
+				<Image src={image.url} fit={mediaFit.toLowerCase()} height={image.dimensions.height} width={image.dimensions.width} position={mediaPosition} alt={image.alt} />
 			{/if}
 		</div>
 		{#if elWidth >= 768}
