@@ -62,8 +62,8 @@ svg {
 */
 :root {
 
-	--font-headline: "Hoefler Titling A";
-	--font-body: "Verlag A";
+	--font-headline: "Hoefler Titling A", "Hoefler Titling B";
+	--font-body: "Verlag A", "Verlag B";
 
 	/**
 	 * Borders

@@ -41,11 +41,11 @@ $browser-context: 16;
 
 $headline: var(--font-headline, "Helvetica, Arial, sans-serif");
 $headline-alt: var(--font-headline-alt, var(--font-headline, "Helvetica, Arial, sans-serif"));
-$headline-spacing: -0.03em;
+$headline-spacing: 0em;
 $headline-line-height: 1;
 $body: var(--font-body, "Helvetica, Arial, sans-serif");
 $body-alt: var(--font-body-alt, var(--font-body, "Helvetica, Arial, sans-serif"));
-$body-spacing: -0.01em;
+$body-spacing: 0em;
 $body-line-height: 1.35;
 
 /**

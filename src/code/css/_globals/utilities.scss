@@ -134,133 +134,78 @@ h3,
 h4,
 .h4,
 h5,
-.h5 {
+.h5,
+h6,
+.h6 {
 	font-family: $headline;
 	letter-spacing: $headline-spacing;
 	line-height: $headline-line-height;
 }
 
-h6,
-.h6 {
-	font-family: $headline-alt;
-}
-
 h1,
 .h1 {
-	font-size: em(40px);
-	font-weight: 500;
-
-	@include tablet {
-		font-size: em(65px);
-	}
-
-	@include desktop {
-		font-size: em(80px);
-	}
+	font-size: em(82px);
+	font-weight: 300;
 }
 
 h2,
 .h2 {
-	font-size: em(32px);
-	font-weight: 500;
-
-	@include tablet {
-		font-size: em(48px);
-	}
-
-	@include desktop {
-		font-size: em(64px);
-	}
+	font-size: em(72px);
+	font-weight: 300;
 }
 
 h3,
 .h3 {
-	font-size: em(28px);
-	font-weight: 400;
-
-	@include tablet {
-		font-size: em(36px);
-	}
-
-	@include desktop {
-		font-size: em(48px);
-	}
+	font-size: em(62px);
+	font-weight: 300;
 }
 
 h4,
 .h4 {
-	font-size: em(24px);
-	font-weight: 400;
-
-	@include tablet {
-		font-size: em(28px);
-	}
-
-	@include desktop {
-		font-size: em(32px);
-	}
+	font-size: em(56px);
+	font-weight: 300;
 }
 
 h5,
 .h5 {
-	font-size: em(20px);
-	font-weight: 400;
-
-	@include tablet {
-		font-size: em(22px);
-	}
-
-	@include desktop {
-		font-size: em(24px);
-	}
+	font-size: em(48px);
+	font-weight: 300;
 }
 
 h6,
 .h6 {
-	font-size: em(16px);
-	font-weight: 400;
+	font-size: em(40px);
+	font-weight: 300;
 }
 
 p {
-	font-size: em(24px);
+	font-size: em(36px);
 	font-weight: 200;
 	letter-spacing: $body-spacing;
 	line-height: $body-line-height;
 
-	@include tablet {
-		font-size: em(24px);
-	}
+	// @include tablet {
+	// 	font-size: em(24px);
+	// }
 
-	@include desktop {
-		font-size: em(24px);
-	}
+	// @include desktop {
+	// 	font-size: em(24px);
+	// }
 
 	a {
 		text-decoration: underline;
 	}
 
 	&.lg {
-		font-size: em(16px);
-
-		@include tablet {
-			font-size: em(18px);
-		}
-
-		@include desktop {
-			font-size: em(20px);
-		}
+		font-size: em(42px);
 	}
 }
 
 .eyebrow {
 	font-family: $headline-alt;
-	font-size: em(13px);
+	font-size: em(16px);
 	letter-spacing: $headline-spacing;
 	line-height: $headline-line-height;
-
-	@include desktop {
-		font-size: em(14px);
-	}
 }
 
 .richtext {
@@ -304,6 +249,9 @@ p {
 		padding-left: 30px;
 
 		li {
+			font-family: $body;
+			font-size: em(36px);
+			font-weight: 200;
 
 			a {
 
@@ -415,7 +363,7 @@ p {
 
 	sup {
 		font-size: 65%;
-		font-weight: 400;
+		font-weight: 300;
 		left: -0.25em;
 		top: -0.65em;
 		vertical-align: baseline;
@@ -424,7 +372,7 @@ p {
 	sub {
 		bottom: -0.45em;
 		font-size: 65%;
-		font-weight: 400;
+		font-weight: 300;
 		left: -0.25em;
 		vertical-align: baseline;
 	}
@@ -434,7 +382,7 @@ p {
 	}
 
 	small {
-		font-size: em(13);
+		font-size: em(16);
 	}
 
 	/** Prismic Image Block */
