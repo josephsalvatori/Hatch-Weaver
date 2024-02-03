@@ -23,9 +23,8 @@ let searchWidth = 0;
 let drawerOpen = false;
 let drawerWidth = 0;
 
-
-let contentFontColor = ($page.data.settings.navigation?.navigation_font_color) ? refs.colors[slugify($page.data.settings.navigation.navigation_font_color)] : "var(--color-brand-text)";
-let contentBackgroundColor = ($page.data.settings.navigation?.navigation_background_color) ? refs.colors[slugify($page.data.settings.navigation.navigation_background_color)] : "var(--color-brand-background)";
+let contentFontColor = ($page.data.settings.navigation?.data?.navigation_font_color) ? refs.colors[slugify($page.data.settings.navigation.data.navigation_font_color)] : "var(--color-brand-text)";
+let contentBackgroundColor = ($page.data.settings.navigation?.data?.navigation_background_color) ? refs.colors[slugify($page.data.settings.navigation.data.navigation_background_color)] : "var(--color-brand-background)";
 
 beforeNavigate(() => {
 	drawerOpen = false;

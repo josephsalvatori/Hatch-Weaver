@@ -222,16 +222,17 @@ h6,
 }
 
 p {
-	font-size: em(14px);
+	font-size: em(24px);
+	font-weight: 200;
 	letter-spacing: $body-spacing;
 	line-height: $body-line-height;
 
 	@include tablet {
-		font-size: em(15px);
+		font-size: em(24px);
 	}
 
 	@include desktop {
-		font-size: em(16px);
+		font-size: em(24px);
 	}
 
 	a {
