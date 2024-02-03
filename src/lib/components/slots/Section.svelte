@@ -14,23 +14,13 @@ if(sectionBackground) {
 </script>
 
 <template>
-	<section id={props?.id} class="{(type) ? `${type}-` : ""}section {(sectionPadding !== "None") ? `${refs.paddings[slugify(sectionPadding)]}` : ""} max-w-[var(--max-width)] {(sectionBackground) ? "bg-[var(--background-color)]" : ""} overflow-hidden" data-index={props?.index} data-variation={props?.variation} style="{(sectionBackground) ? `--background-color: ${sectionBackground};` : ""}">
-		<slot />
-	</section>
+	{#if (props?.id).indexOf("section_group") > -1 || (props?.id).indexOf("carousel") > -1}
+		<div id={props?.id} class="{(type) ? `${type}-` : ""}section {(sectionPadding !== "None") ? `${refs.paddings[slugify(sectionPadding)]}` : ""} max-w-[var(--max-width)] {(sectionBackground) ? "bg-[var(--background-color)]" : ""} overflow-hidden" data-index={props?.index} data-variation={props?.variation} style="{(sectionBackground) ? `--background-color: ${sectionBackground};` : ""}">
+			<slot />
+		</div>
+	{:else}
+		<section id={props?.id} class="{(type) ? `${type}-` : ""}section {(sectionPadding !== "None") ? `${refs.paddings[slugify(sectionPadding)]}` : ""} max-w-[var(--max-width)] {(sectionBackground) ? "bg-[var(--background-color)]" : ""} overflow-hidden" data-index={props?.index} data-variation={props?.variation} style="{(sectionBackground) ? `--background-color: ${sectionBackground};` : ""}">
+			<slot />
+		</section>
+	{/if}
 </template>
-
-<style lang="scss">
-:global(.slice-section) {
-	min-height: 100%;
-	position: relative;
-}
-
-:global(.slice-section:empty),
-:global(.group-section:empty) {
-	display: none;
-}
-
-:global(.group-section .grid-gap .slice-section) {
-	border-radius: var(--border-radius);
-}
-</style>

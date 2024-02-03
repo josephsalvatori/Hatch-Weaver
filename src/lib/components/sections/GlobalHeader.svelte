@@ -34,10 +34,10 @@ beforeNavigate(() => {
 <svelte:window bind:innerWidth={windowWidth}></svelte:window>
 
 <header style="--header-height: 60px; --notice-height: {noticeHeight}px;">
-	<div class="h-[calc(var(--header-height)_+_var(--notice-height))]"></div>
+	<!-- <div class="h-[calc(var(--header-height)_+_var(--notice-height))]"></div> -->
 	{#if windowWidth > 0}
 		<nav aria-label="Main Navigation" class="">
-			<div class="bg-[var(--background-color)] text-[color:var(--text-color)] px-[var(--site-gutter)] flex fixed h-[60px] min-h-[60px] items-center justify-between left-[var(--site-gutter)] top-[10px] w-[calc(100%_-_(var(--site-gutter)_*_2))] rounded-[var(--border-radius)] z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
+			<div class="bg-[var(--background-color)] text-[color:var(--text-color)] px-[var(--site-gutter)] flex fixed h-[50px] min-h-[50px] items-center justify-between left-[var(--site-gutter)] top-[10px] w-[calc(100%_-_(var(--site-gutter)_*_2))] rounded-[var(--border-radius)] z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
 				{#if windowWidth <= 768}
 					<button type="button" class="btn-hamburger {(drawerOpen) ? "is-active" : ""} relative z-[90]" on:keydown={() => {}} on:click|preventDefault={() => { drawerOpen = !drawerOpen; }}>
 						<span>

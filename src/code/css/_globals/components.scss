@@ -1,0 +1,19 @@
+.slice-section {
+	min-height: 100%;
+	position: relative;
+}
+
+.slice-section:empty,
+.group-section:empty {
+	display: none;
+}
+
+.group-section .grid-gap .slice-section {
+	border-radius: var(--border-radius);
+}
+
+main > [id^="richtext"]:first-child > :first-child,
+main > [id^="section_group"]:first-child > :first-child,
+main > [id^="media"]:first-child > :first-child {
+	padding-top: 70px;
+}

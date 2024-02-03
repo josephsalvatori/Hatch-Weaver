@@ -82,7 +82,6 @@ $: if(selected && selected.node.image.url !== lockedSelection?.node?.image?.url)
 	class="block h-auto w-full slides slides-{slugify(alignment)}"
 	effect={effect}
 	init={false}
-	space-between={(elWidth > 768 ? 30 : 20)}
 	on:slidechange={(s) => {
 		activeIndex = s.detail[0].snapIndex || s.detail[0].activeIndex;
 	}}
