@@ -18,6 +18,17 @@
 		},
 		"extend": {
 			"colors": {
+				"hw-text": "#E4E4E4",
+				"hw-text-2": "#FEFEFE",
+				"hw-text-bg": "#232F3B",
+				"hw-text-bg-2": "#212120",
+				"hw-accent-1": "#232F3B",
+				"hw-accent-2": "#8ca9bd",
+				"hw-accent-3": "#ad8fbf",
+				"hw-accent-4": "#bf1919",
+				"hw-accent-5": "#bac944",
+				"hw-accent-6": "#E4E4E4",
+				"hw-link": "#C39F87",
 				"theme-base-accent": "var(--theme-base-color-accent)",
 				"theme-base-background": "var(--theme-base-color-background)",
 				"theme-base-font": "var(--theme-base-color-font)",
