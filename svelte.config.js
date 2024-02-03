@@ -8,6 +8,7 @@ import MagicString from "magic-string";
 const config = {
 	kit: {
 		adapter: adapter({
+			fallback: "index.html",
 			runtime: "nodejs18.x" // runtime environment on hosting platform
 		}),
 		alias: {
@@ -23,7 +24,11 @@ const config = {
 		},
 		prerender: {
 			crawl: true,
-			entries: []
+			entries: [
+				"/",
+				"/articles"
+			],
+			handleHttpError: "warn"
 		}
 	},
 	preprocess: [

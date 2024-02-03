@@ -3,6 +3,22 @@ import { Api } from "$api";
 import { findTwitterHandle } from "$js/_helpers/strings";
 import { asText } from "@prismicio/client";
 
+/** @type {import('./$types').EntryGenerator} */
+export async function entries() {
+
+	let entries = await Api.Content.getMany({
+		type: "article",
+		params: {
+			pageSize: 100
+		}
+	});
+
+	let routes = entries.map((entry) => ({ uid: entry.uid }));
+	// TODO: Check for pagination here.
+
+	return routes;
+}
+
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({ cookies, fetch, params, parent, request, url }) {
 

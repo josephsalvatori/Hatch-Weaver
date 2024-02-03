@@ -34,6 +34,7 @@
             "label": "Section Font Color",
             "placeholder": "",
 			"options": [
+				"None",
 				"Text 1",
 				"Text 2",
 				"Background 1",
@@ -44,7 +45,8 @@
 				"Accent 4",
 				"Accent 5",
 				"Accent 6"
-			]
+			],
+			"default": "None"
           }
         },
         "section_padding": {
@@ -73,17 +75,19 @@
 			  "label": "Section Background Color",
 			  "placeholder": "",
 			  "options": [
-				  "Text 1",
-				  "Text 2",
-				  "Background 1",
-				  "Background 2",
-				  "Accent 1",
-				  "Accent 2",
-				  "Accent 3",
-				  "Accent 4",
-				  "Accent 5",
-				  "Accent 6"
-			  ]
+				"None",
+				"Text 1",
+				"Text 2",
+				"Background 1",
+				"Background 2",
+				"Accent 1",
+				"Accent 2",
+				"Accent 3",
+				"Accent 4",
+				"Accent 5",
+				"Accent 6"
+			],
+			"default": "None"
 			}
         },
         "content_vertical_padding": {
@@ -197,17 +201,19 @@
 			  "label": "Section Background Color",
 			  "placeholder": "",
 			  "options": [
-				  "Text 1",
-				  "Text 2",
-				  "Background 1",
-				  "Background 2",
-				  "Accent 1",
-				  "Accent 2",
-				  "Accent 3",
-				  "Accent 4",
-				  "Accent 5",
-				  "Accent 6"
-			  ]
+				"None",
+				"Text 1",
+				"Text 2",
+				"Background 1",
+				"Background 2",
+				"Accent 1",
+				"Accent 2",
+				"Accent 3",
+				"Accent 4",
+				"Accent 5",
+				"Accent 6"
+			],
+			"default": "None"
 			}
         },
         "content_vertical_padding": {

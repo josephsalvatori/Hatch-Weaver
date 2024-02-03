@@ -54,6 +54,7 @@
             "label": "Section Background Color",
             "placeholder": "",
 			"options": [
+				"None",
 				"Text 1",
 				"Text 2",
 				"Background 1",
@@ -64,7 +65,8 @@
 				"Accent 4",
 				"Accent 5",
 				"Accent 6"
-			]
+			],
+			"default": "None"
           }
 		  }
       },

@@ -59,8 +59,7 @@ interface ArticleDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  content: prismic.RichTextField
-  /**
+  content: prismic.RichTextField /**
    * Slice Zone field in *Article*
    *
    * - **Field Type**: Slice Zone
@@ -69,8 +68,7 @@ interface ArticleDocumentData {
    * - **Tab**: Secondary
    * - **Documentation**: https://prismic.io/docs/field#slices
    */;
-  slices: prismic.SliceZone<ArticleDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<ArticleDocumentDataSlicesSlice> /**
    * Meta Description field in *Article*
    *
    * - **Field Type**: Text
@@ -174,8 +172,7 @@ interface HomeDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<HomeDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<HomeDocumentDataSlicesSlice> /**
    * Meta Title field in *Home*
    *
    * - **Field Type**: Text
@@ -240,6 +237,28 @@ type NavigationSettingsDocumentDataSlicesFooterUtilitySlice = LinkSlice;
  */
 interface NavigationSettingsDocumentData {
   /**
+   * navigation_font_color field in *Navigation Settings*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation_settings.navigation_font_color
+   * - **Tab**: Header
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  navigation_font_color: prismic.SelectField<"Text 1" | "2">;
+
+  /**
+   * `navigation_background_color` field in *Navigation Settings*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **API ID Path**: navigation_settings.navigation_background_color
+   * - **Tab**: Header
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  navigation_background_color: prismic.SelectField;
+
+  /**
    * Slice Zone field in *Navigation Settings*
    *
    * - **Field Type**: Slice Zone
@@ -248,8 +267,7 @@ interface NavigationSettingsDocumentData {
    * - **Tab**: Header
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices_header: prismic.SliceZone<NavigationSettingsDocumentDataSlicesHeaderSlice>
-  /**
+  slices_header: prismic.SliceZone<NavigationSettingsDocumentDataSlicesHeaderSlice> /**
    * Slice Zone field in *Navigation Settings*
    *
    * - **Field Type**: Slice Zone
@@ -258,8 +276,7 @@ interface NavigationSettingsDocumentData {
    * - **Tab**: Header ~ Utility
    * - **Documentation**: https://prismic.io/docs/field#slices
    */;
-  slices_header_utility: prismic.SliceZone<NavigationSettingsDocumentDataSlicesHeaderUtilitySlice>
-  /**
+  slices_header_utility: prismic.SliceZone<NavigationSettingsDocumentDataSlicesHeaderUtilitySlice> /**
    * Slice Zone field in *Navigation Settings*
    *
    * - **Field Type**: Slice Zone
@@ -268,8 +285,7 @@ interface NavigationSettingsDocumentData {
    * - **Tab**: Footer
    * - **Documentation**: https://prismic.io/docs/field#slices
    */;
-  slices_footer: prismic.SliceZone<NavigationSettingsDocumentDataSlicesFooterSlice>
-  /**
+  slices_footer: prismic.SliceZone<NavigationSettingsDocumentDataSlicesFooterSlice> /**
    * Slice Zone field in *Navigation Settings*
    *
    * - **Field Type**: Slice Zone
@@ -341,8 +357,7 @@ interface PageDocumentData {
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
-  slices: prismic.SliceZone<PageDocumentDataSlicesSlice>
-  /**
+  slices: prismic.SliceZone<PageDocumentDataSlicesSlice> /**
    * Meta Title field in *Page*
    *
    * - **Field Type**: Text
@@ -462,8 +477,7 @@ interface SettingsDocumentData {
    * - **Tab**: Settings
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  alternative_landing_page: prismic.ContentRelationshipField<"page">
-  /**
+  alternative_landing_page: prismic.ContentRelationshipField<"page"> /**
    * GA Measurement ID field in *Website Settings*
    *
    * - **Field Type**: Text
@@ -483,8 +497,7 @@ interface SettingsDocumentData {
    * - **Tab**: Analytics
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  facebook_app_id: prismic.KeyTextField
-  /**
+  facebook_app_id: prismic.KeyTextField /**
    * Facebook URL field in *Website Settings*
    *
    * - **Field Type**: Link
@@ -537,8 +550,7 @@ interface SettingsDocumentData {
    * - **Tab**: Social Media
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  youtube_url: prismic.LinkField
-  /**
+  youtube_url: prismic.LinkField /**
    * Rounded Corners (Components) field in *Website Settings*
    *
    * - **Field Type**: Number
@@ -767,8 +779,7 @@ interface SettingsDocumentData {
    * - **Tab**: Layout
    * - **Documentation**: https://prismic.io/docs/field#number
    */
-  site_gutter_dk: prismic.NumberField
-  /**
+  site_gutter_dk: prismic.NumberField /**
    * Max Width (Buttons) field in *Website Settings*
    *
    * - **Field Type**: Number
@@ -799,8 +810,7 @@ interface SettingsDocumentData {
    * - **Tab**: Buttons
    * - **Documentation**: https://prismic.io/docs/field#number
    */
-  button_max_width_dk: prismic.NumberField
-  /**
+  button_max_width_dk: prismic.NumberField /**
    * Site Title field in *Website Settings*
    *
    * - **Field Type**: Text
@@ -823,37 +833,114 @@ interface SettingsDocumentData {
   description: prismic.KeyTextField;
 
   /**
-   * Theme Background field in *Website Settings*
+   * Brand Background 1 field in *Website Settings*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.theme_background
+   * - **API ID Path**: settings.brand_background_1
    * - **Tab**: Branding
    * - **Documentation**: https://prismic.io/docs/field#color
    */
-  theme_background: prismic.ColorField;
+  brand_background_1: prismic.ColorField;
 
   /**
-   * Theme Accent field in *Website Settings*
+   * Brand Background 2 field in *Website Settings*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.theme_accent
+   * - **API ID Path**: settings.brand_background_2
    * - **Tab**: Branding
    * - **Documentation**: https://prismic.io/docs/field#color
    */
-  theme_accent: prismic.ColorField;
+  brand_background_2: prismic.ColorField;
 
   /**
-   * Theme Font field in *Website Settings*
+   * Brand Text Color 1 field in *Website Settings*
    *
    * - **Field Type**: Color
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.theme_font
+   * - **API ID Path**: settings.brand_text_1
    * - **Tab**: Branding
    * - **Documentation**: https://prismic.io/docs/field#color
    */
-  theme_font: prismic.ColorField;
+  brand_text_1: prismic.ColorField;
+
+  /**
+   * Brand Text Color 2 field in *Website Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.brand_text_2
+   * - **Tab**: Branding
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  brand_text_2: prismic.ColorField;
+
+  /**
+   * Brand Accent 1 field in *Website Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.brand_accent_1
+   * - **Tab**: Branding
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  brand_accent_1: prismic.ColorField;
+
+  /**
+   * Brand Accent 2 field in *Website Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.brand_accent_2
+   * - **Tab**: Branding
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  brand_accent_2: prismic.ColorField;
+
+  /**
+   * Brand Accent 3 field in *Website Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.brand_accent_3
+   * - **Tab**: Branding
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  brand_accent_3: prismic.ColorField;
+
+  /**
+   * Brand Accent 4 field in *Website Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.brand_accent_4
+   * - **Tab**: Branding
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  brand_accent_4: prismic.ColorField;
+
+  /**
+   * Brand Accent 5 field in *Website Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.brand_accent_5
+   * - **Tab**: Branding
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  brand_accent_5: prismic.ColorField;
+
+  /**
+   * Brand Accent 6 field in *Website Settings*
+   *
+   * - **Field Type**: Color
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.brand_accent_6
+   * - **Tab**: Branding
+   * - **Documentation**: https://prismic.io/docs/field#color
+   */
+  brand_accent_6: prismic.ColorField;
 
   /**
    * Theme Button Background field in *Website Settings*
@@ -930,8 +1017,7 @@ interface SettingsDocumentData {
    * - **Tab**: Branding
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  google_font_body_alt: prismic.KeyTextField
-  /**
+  google_font_body_alt: prismic.KeyTextField /**
    * Organization Name field in *Website Settings*
    *
    * - **Field Type**: Text
@@ -1101,12 +1187,24 @@ export interface CarouselSliceDefaultPrimary {
   /**
    * Font Color field in *Carousel → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: carousel.primary.content_box_font_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_font_color: prismic.ColorField;
+  content_box_font_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Carousel Section Content field in *Carousel → Primary*
@@ -1189,12 +1287,24 @@ export interface CarouselSliceDefaultPrimary {
   /**
    * Section Background Color field in *Carousel → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: carousel.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -1277,12 +1387,24 @@ export interface CarouselSliceArticleRecirculationPrimary {
   /**
    * Font Color field in *Carousel → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: carousel.primary.content_box_font_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_font_color: prismic.ColorField;
+  content_box_font_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Article Category field in *Carousel → Primary*
@@ -1365,12 +1487,24 @@ export interface CarouselSliceArticleRecirculationPrimary {
   /**
    * Section Background Color field in *Carousel → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: carousel.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -1484,12 +1618,24 @@ export interface FaqsSliceDefaultPrimary {
   /**
    * Section Font Color field in *Faqs → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: faqs.primary.content_box_font_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_font_color: prismic.ColorField;
+  content_box_font_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Section Padding field in *Faqs → Primary*
@@ -1517,12 +1663,24 @@ export interface FaqsSliceDefaultPrimary {
   /**
    * Section Background Color field in *Faqs → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: faqs.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -1649,12 +1807,24 @@ export interface FaqsSliceWithMediaPrimary {
   /**
    * Content Box Font Color field in *Faqs → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: faqs.primary.content_box_font_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_font_color: prismic.ColorField;
+  content_box_font_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Section Padding field in *Faqs → Primary*
@@ -1682,12 +1852,24 @@ export interface FaqsSliceWithMediaPrimary {
   /**
    * Section Background Color field in *Faqs → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: faqs.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -1792,12 +1974,24 @@ export interface HtmlSliceDefaultPrimary {
   /**
    * Section Background Color field in *Html → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: html.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -2166,12 +2360,24 @@ export interface MarqueeSliceDefaultPrimary {
   /**
    * Section Font Color field in *Marquee → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: marquee.primary.content_box_font_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_font_color: prismic.ColorField;
+  content_box_font_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Section Padding field in *Marquee → Primary*
@@ -2199,12 +2405,24 @@ export interface MarqueeSliceDefaultPrimary {
   /**
    * Section Background Color field in *Marquee → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: marquee.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Content Vertical Padding field in *Marquee → Primary*
@@ -2352,12 +2570,24 @@ export interface MarqueeSliceImagesPrimary {
   /**
    * Section Background Color field in *Marquee → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: marquee.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Content Vertical Padding field in *Marquee → Primary*
@@ -2464,6 +2694,17 @@ export interface MediaSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   media_fit: prismic.SelectField<"Cover" | "Contain", "filled">;
+
+  /**
+   * Media Position field in *Media → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Center
+   * - **API ID Path**: media.primary.media_position
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  media_position: prismic.SelectField<"Top" | "Center" | "Right", "filled">;
 
   /**
    * Media Aspect Ratio field in *Media → Primary*
@@ -2606,22 +2847,46 @@ export interface MediaSliceDefaultPrimary {
   /**
    * Content Box Font Color field in *Media → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: media.primary.content_box_font_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_font_color: prismic.ColorField;
+  content_box_font_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Content Box Background Color field in *Media → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: media.primary.content_box_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_background_color: prismic.ColorField;
+  content_box_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Content Break on Mobile field in *Media → Primary*
@@ -2660,12 +2925,24 @@ export interface MediaSliceDefaultPrimary {
   /**
    * Section Background Color field in *Media → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: media.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -2715,6 +2992,17 @@ export interface MediaSliceMediaSplitPrimary {
    * - **Documentation**: https://prismic.io/docs/field#select
    */
   media_fit: prismic.SelectField<"Cover" | "Contain", "filled">;
+
+  /**
+   * Media Position field in *Media → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Center
+   * - **API ID Path**: media.primary.media_position
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  media_position: prismic.SelectField<"Top" | "Center" | "Right", "filled">;
 
   /**
    * Media Aspect Ratio field in *Media → Primary*
@@ -2832,12 +3120,24 @@ export interface MediaSliceMediaSplitPrimary {
   /**
    * Content Box Font Color field in *Media → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: media.primary.content_box_font_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_font_color: prismic.ColorField;
+  content_box_font_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Force Single Column field in *Media → Primary*
@@ -2904,12 +3204,24 @@ export interface MediaSliceMediaSplitPrimary {
   /**
    * Section Background Color field in *Media → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: media.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -2981,6 +3293,17 @@ export interface MediaSliceMediaFullscreenPrimary {
   media_fit: prismic.SelectField<"Cover" | "Contain", "filled">;
 
   /**
+   * Media Position field in *Media → Primary*
+   *
+   * - **Field Type**: Select
+   * - **Placeholder**: *None*
+   * - **Default Value**: Center
+   * - **API ID Path**: media.primary.media_position
+   * - **Documentation**: https://prismic.io/docs/field#select
+   */
+  media_position: prismic.SelectField<"Top" | "Center" | "Right", "filled">;
+
+  /**
    * Media Aspect Ratio field in *Media → Primary*
    *
    * - **Field Type**: Select
@@ -3042,12 +3365,24 @@ export interface MediaSliceMediaFullscreenPrimary {
   /**
    * Section Background Color field in *Media → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: media.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -3199,12 +3534,24 @@ export interface RichtextSliceDefaultPrimary {
   /**
    * Section Font Color field in *Richtext → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: richtext.primary.content_box_font_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  content_box_font_color: prismic.ColorField;
+  content_box_font_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 
   /**
    * Section Padding field in *Richtext → Primary*
@@ -3232,12 +3579,24 @@ export interface RichtextSliceDefaultPrimary {
   /**
    * Section Background Color field in *Richtext → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: richtext.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "None"
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -3367,12 +3726,23 @@ export interface SectionGroupSliceDefaultPrimary {
   /**
    * Section Background Color field in *SectionGroup → Primary*
    *
-   * - **Field Type**: Color
+   * - **Field Type**: Select
    * - **Placeholder**: *None*
    * - **API ID Path**: section_group.primary.section_background_color
-   * - **Documentation**: https://prismic.io/docs/field#color
+   * - **Documentation**: https://prismic.io/docs/field#select
    */
-  section_background_color: prismic.ColorField;
+  section_background_color: prismic.SelectField<
+    | "Text 1"
+    | "Text 2"
+    | "Background 1"
+    | "Background 2"
+    | "Accent 1"
+    | "Accent 2"
+    | "Accent 3"
+    | "Accent 4"
+    | "Accent 5"
+    | "Accent 6"
+  >;
 }
 
 /**
@@ -3409,7 +3779,7 @@ declare module "@prismicio/client" {
   interface CreateClient {
     (
       repositoryNameOrEndpoint: string,
-      options?: prismic.ClientConfig
+      options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
   }
 

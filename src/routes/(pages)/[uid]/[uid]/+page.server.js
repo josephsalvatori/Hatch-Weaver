@@ -4,6 +4,32 @@ import { buildTheme } from "$js/_helpers/buildTheme";
 import { findTwitterHandle } from "$js/_helpers/strings";
 import { asText } from "@prismicio/client";
 
+export const prerender = "auto";
+
+/** @type {import('./$types').EntryGenerator} */
+export async function entries() {
+
+	let entries = await Api.Content.getMany({
+		type: "page",
+		params: {
+			pageSize: 100
+		}
+	});
+
+	let routes = entries.reduce((result, entry) => {
+
+		if(entry?.data?.parent_page?.uid) {
+			result.push({
+				uid: entry.uid
+			});
+		}
+
+		return result;
+	}, []);
+
+	return routes;
+}
+
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({ cookies, fetch, parent, params, request, url }) {
 

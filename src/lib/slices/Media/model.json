@@ -199,6 +199,7 @@
             "label": "Content Box Font Color",
             "placeholder": "",
 			"options": [
+				"None",
 				"Text 1",
 				"Text 2",
 				"Background 1",
@@ -209,7 +210,8 @@
 				"Accent 4",
 				"Accent 5",
 				"Accent 6"
-			]
+			],
+			"default": "None"
           }
         },
         "content_box_background_color": {
@@ -218,6 +220,7 @@
             "label": "Content Box Background Color",
             "placeholder": "",
 			"options": [
+				"None",
 				"Text 1",
 				"Text 2",
 				"Background 1",
@@ -228,7 +231,8 @@
 				"Accent 4",
 				"Accent 5",
 				"Accent 6"
-			]
+			],
+			"default": "None"
           }
         },
         "content_break_mobile": {
@@ -266,17 +270,19 @@
 			  "label": "Section Background Color",
 			  "placeholder": "",
 			  "options": [
-				  "Text 1",
-				  "Text 2",
-				  "Background 1",
-				  "Background 2",
-				  "Accent 1",
-				  "Accent 2",
-				  "Accent 3",
-				  "Accent 4",
-				  "Accent 5",
-				  "Accent 6"
-			  ]
+				"None",
+				"Text 1",
+				"Text 2",
+				"Background 1",
+				"Background 2",
+				"Accent 1",
+				"Accent 2",
+				"Accent 3",
+				"Accent 4",
+				"Accent 5",
+				"Accent 6"
+			],
+			"default": "None"
 			}
         }
       },
@@ -441,6 +447,7 @@
             "label": "Content Box Font Color",
             "placeholder": "",
 			"options": [
+				"None",
 				"Text 1",
 				"Text 2",
 				"Background 1",
@@ -451,7 +458,8 @@
 				"Accent 4",
 				"Accent 5",
 				"Accent 6"
-			]
+			],
+			"default": "None"
           }
         },
         "content_break_mobile": {
@@ -513,17 +521,19 @@
 			  "label": "Section Background Color",
 			  "placeholder": "",
 			  "options": [
-				  "Text 1",
-				  "Text 2",
-				  "Background 1",
-				  "Background 2",
-				  "Accent 1",
-				  "Accent 2",
-				  "Accent 3",
-				  "Accent 4",
-				  "Accent 5",
-				  "Accent 6"
-			  ]
+				"None",
+				"Text 1",
+				"Text 2",
+				"Background 1",
+				"Background 2",
+				"Accent 1",
+				"Accent 2",
+				"Accent 3",
+				"Accent 4",
+				"Accent 5",
+				"Accent 6"
+			],
+			"default": "None"
 			}
         }
       },
@@ -652,17 +662,19 @@
 			  "label": "Section Background Color",
 			  "placeholder": "",
 			  "options": [
-				  "Text 1",
-				  "Text 2",
-				  "Background 1",
-				  "Background 2",
-				  "Accent 1",
-				  "Accent 2",
-				  "Accent 3",
-				  "Accent 4",
-				  "Accent 5",
-				  "Accent 6"
-			  ]
+				"None",
+				"Text 1",
+				"Text 2",
+				"Background 1",
+				"Background 2",
+				"Accent 1",
+				"Accent 2",
+				"Accent 3",
+				"Accent 4",
+				"Accent 5",
+				"Accent 6"
+			],
+			"default": "None"
 			}
         }
       },

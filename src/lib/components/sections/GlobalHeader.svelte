@@ -38,7 +38,7 @@ beforeNavigate(() => {
 	<div class="h-[calc(var(--header-height)_+_var(--notice-height))]"></div>
 	{#if windowWidth > 0}
 		<nav aria-label="Main Navigation" class="">
-			<div class="bg-[var(--background-color)] text-[color:var(--text-color)] border-b-2 cx flex fixed h-[60px] min-h-[60px] items-center justify-between left-0 top-0 w-full z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
+			<div class="bg-[var(--background-color)] text-[color:var(--text-color)] px-[var(--site-gutter)] flex fixed h-[60px] min-h-[60px] items-center justify-between left-[var(--site-gutter)] top-[10px] w-[calc(100%_-_(var(--site-gutter)_*_2))] rounded-[var(--border-radius)] z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
 				{#if windowWidth <= 768}
 					<button type="button" class="btn-hamburger {(drawerOpen) ? "is-active" : ""} relative z-[90]" on:keydown={() => {}} on:click|preventDefault={() => { drawerOpen = !drawerOpen; }}>
 						<span>

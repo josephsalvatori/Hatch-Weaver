@@ -6,10 +6,13 @@
   "status": true,
   "json": {
     "Header": {
-		"naviagtion_font_color": {
-			"type": "Select",
+      "navigation_font_color": {
+        "type": "Select",
+		"config": {
+			"label": "Navigation Font Color",
 			"placeholder": "",
 			"options": [
+				"None",
 				"Text 1",
 				"Text 2",
 				"Background 1",
@@ -20,12 +23,17 @@
 				"Accent 4",
 				"Accent 5",
 				"Accent 6"
-			]
-		},
-		"naviagtion_background_color": {
-			"type": "Select",
+			],
+			"default": "None"
+		}
+      },
+      "navigation_background_color": {
+        "type": "Select",
+		"config": {
+			"label": "Navigation Background Color",
 			"placeholder": "",
 			"options": [
+				"None",
 				"Text 1",
 				"Text 2",
 				"Background 1",
@@ -36,8 +44,10 @@
 				"Accent 4",
 				"Accent 5",
 				"Accent 6"
-			]
-		},
+			],
+			"default": "None"
+		}
+      },
       "slices_header": {
         "type": "Slices",
         "fieldset": "Slice Zone",

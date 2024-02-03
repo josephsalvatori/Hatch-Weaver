@@ -5,6 +5,8 @@ import { Api } from "$api";
 import { server } from "$lib/stores/content";
 import { parseGoogleFonts } from "$js/_helpers/fonts";
 
+export const prerender = "auto";
+
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({ cookies, locals, fetch, params, request, url }) {
 

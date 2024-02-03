@@ -1,6 +1,21 @@
 import { error } from "@sveltejs/kit";
 import { Api } from "$api";
 
+/** @type {import('./$types').EntryGenerator} */
+export async function entries() {
+
+	let entries = await Api.Content.getMany({
+		type: "category",
+		params: {
+			pageSize: 100
+		}
+	});
+
+	let routes = entries.map((entry) => ({ category: entry.uid }));
+
+	return routes;
+}
+
 /** @type {import('./$types').LayoutServerLoad} */
 export async function load({ cookies, fetch, params, request, url }) {
 
