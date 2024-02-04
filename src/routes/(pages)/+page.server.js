@@ -4,6 +4,8 @@ import { buildTheme } from "$js/_helpers/buildTheme";
 import { findTwitterHandle } from "$js/_helpers/strings";
 import { asText } from "@prismicio/client";
 
+export const prerender = "auto";
+
 /** @type {import('../$types').LayoutServerLoad} */
 export async function load({ cookies, fetch, params, parent, request, url }) {
 
