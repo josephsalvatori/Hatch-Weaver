@@ -12,8 +12,8 @@
 	border-radius: var(--border-radius);
 }
 
+// main > [id^="media"]:first-child > :first-child,
 main > [id^="richtext"]:first-child > :first-child,
-main > [id^="section_group"]:first-child > :first-child,
-main > [id^="media"]:first-child > :first-child {
+main > [id^="section_group"]:first-child > :first-child {
 	padding-top: 70px;
 }

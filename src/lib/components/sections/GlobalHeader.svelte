@@ -37,21 +37,28 @@ beforeNavigate(() => {
 	<!-- <div class="h-[calc(var(--header-height)_+_var(--notice-height))]"></div> -->
 	{#if windowWidth > 0}
 		<nav aria-label="Main Navigation" class="">
-			<div class="bg-[var(--background-color)] text-[color:var(--text-color)] px-[var(--site-gutter)] flex fixed h-[50px] min-h-[50px] items-center justify-between left-[var(--site-gutter)] top-[10px] w-[calc(100%_-_(var(--site-gutter)_*_2))] rounded-[var(--border-radius)] z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
+			<div class="bg-[var(--background-color)] text-[color:var(--text-color)] px-[10px] flex fixed h-[50px] min-h-[50px] items-center justify-between left-[var(--site-gutter)] top-[10px] w-[calc(100%_-_(var(--site-gutter)_*_2))] rounded-[var(--border-radius)] z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
 				{#if windowWidth <= 768}
-					<button type="button" class="btn-hamburger {(drawerOpen) ? "is-active" : ""} relative z-[90]" on:keydown={() => {}} on:click|preventDefault={() => { drawerOpen = !drawerOpen; }}>
-						<span>
-							<span></span>
-						</span>
-					</button>
+					<div>
+						<button type="button" class="btn-hamburger {(drawerOpen) ? "is-active" : ""} relative z-[90]" on:keydown={() => {}} on:click|preventDefault={() => { drawerOpen = !drawerOpen; }}>
+							<span>
+								<span></span>
+							</span>
+						</button>
+						<div>LOGO</div>
+					</div>
 				{:else}
+					<div class="w-[200px] flex items-center justify-start">
+						<h1 class="h6 flex items-center ml-[20px]"><a href="/" class="text-[24px]">Hatch & Weaver</a></h1>
+					</div>
 					<ul class="flex h-full items-center">
 						{#if isFilled.sliceZone($page?.data?.settings?.navigation?.data?.slices_header)}
-							{#each $page.data.settings.navigation.data.slices_header as navList}
+							{#each $page.data.settings.navigation.data.slices_header as navList, index}
 								{@const type = navList.slice_type}
 								{@const variation = navList.variation}
 								{#if type === "link"}
-									<li class="mr-[var(--content-gap)]"><a class:btn={(navList.primary.link_style === "button")} href={asLink(navList.primary.link)}>{navList.primary.link_text || (navList.primary.link?.data?.title ? asText(navList.primary.link?.data?.title) : navList.primary.link.uid)}</a></li>
+									{@const linkUrl = asLink(navList.primary.link)}
+									<li class:ml-[40px]={index > 0}><a class:btn={(navList.primary.link_style === "button")} class:btn-link={(navList.primary.link_style !== "button")} class:is-active={$page.url.pathname === linkUrl} href={linkUrl}>{navList.primary.link_text || (navList.primary.link?.data?.title ? asText(navList.primary.link?.data?.title) : navList.primary.link.uid)}</a></li>
 								{:else if type === "link_list"}
 									{#if variation === "megaMenu"}
 										<MenuMega data={navList} open={false} />
@@ -63,7 +70,8 @@ beforeNavigate(() => {
 						{/if}
 					</ul>
 				{/if}
-				<ul class="flex h-full items-center">
+				<ul class="flex h-full items-center justify-end w-[200px]">
+					<Button style="pill">Get in Touch</Button>
 					<!-- <li class="ml-[var(--content-gap)]">
 						<button type="button" class="btn-icon flex items-center justify-center h-[30px] w-[30px]" on:click|preventDefault={() => {
 							if($context.screens.search.op === true) {

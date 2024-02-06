@@ -54,3 +54,47 @@ export const staggerFade = (selector, options = {}) => {
 		run: () => gsap.fromTo(selector, from, to)
 	}
 };
+
+export const staggerFadeIn = (selector, options = {}) => {
+	const defaultOptions = {
+		from: {
+			opacity: 0,
+			y: 60
+		},
+		set: {
+			opacity: 0,
+			y: 60
+		},
+		to: {
+			ease: "power2.out",
+			duration: 0.35,
+			opacity: 1,
+			y: 0,
+			stagger: 0.2
+		}
+	};
+
+	const {
+		from,
+		set,
+		to
+	} = {
+		from: {
+			...defaultOptions.from,
+			...options.from
+		},
+		set: {
+			...defaultOptions.set,
+			...options.set
+		},
+		to: {
+			...defaultOptions.to,
+			...options.to
+		}
+	};
+
+	return {
+		init: () => gsap.set(selector, set),
+		run: () => gsap.fromTo(selector, from, to)
+	}
+};

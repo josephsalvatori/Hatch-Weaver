@@ -77,6 +77,7 @@
               "None",
               "1:1",
               "4:3",
+			  "9:16",
               "16:9"
             ],
             "default_value": "None"
@@ -191,6 +192,13 @@
               "Bottom"
             ],
             "default_value": "Center"
+          }
+        },
+        "content_max_width": {
+          "type": "Number",
+          "config": {
+            "label": "Content Max Width (px)",
+            "placeholder": "Accepts values between 300 and 1600"
           }
         },
         "content_box_font_color": {
@@ -347,6 +355,7 @@
               "None",
               "1:1",
               "4:3",
+			  "9:16",
               "16:9"
             ],
             "default_value": "None"
@@ -613,6 +622,7 @@
               "None",
               "1:1",
               "4:3",
+			  "9:16",
               "16:9"
             ],
             "default_value": "None"

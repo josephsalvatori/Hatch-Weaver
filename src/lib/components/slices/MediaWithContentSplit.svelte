@@ -5,9 +5,10 @@ import Button from "$lib/components/molecules/Button.svelte";
 import Image from "$lib/components/molecules/Image.svelte";
 import Video from "$lib/components/molecules/Video.svelte";
 import { asHTML, isFilled } from "@prismicio/helpers";
-import { staggerFade } from "$js/_helpers/animation";
+import { staggerFadeIn } from "$js/_helpers/animation";
 import { refs } from "$js/_helpers/refs";
 import { slugify } from "$js/_helpers/slugify";
+import { Parallax, ParallaxLayer } from "svelte-parallax";
 
 /**
  * A description
@@ -24,11 +25,12 @@ export let items = [];
 let animation;
 let isInView = false;
 let inViewOptions = {};
-let inViewInit = ({ detail, node }) => { animation = staggerFade(detail.node.children); animation.init(); };
+let inViewInit = ({ detail, node }) => { animation = staggerFadeIn(detail.node.children, { to: { duration: 1.5 }}); animation.init(); };
 let inViewChange = ({ detail }) => isInView = detail?.inView;
 let inViewAnimate = ({ detail }) => animation.run();
 
 /** Defaults */
+let elHeight = 0;
 let elWidth = 0;
 let windowHeight = 0;
 let windowWidth = 0;
@@ -63,6 +65,7 @@ let mediaWidth = image?.dimensions?.width || video?.dimensions?.width || 1000;
 
 /** Section */
 let aspectRatio;
+let mediaElHeight = 0;
 let sectionPadding = data?.section_padding || "None";
 
 $: documentHeight = (windowHeight - (sectionPadding === "None" ? $client.headerHeight : $client.headerHeight * 2));
@@ -71,23 +74,31 @@ $: if(mediaAspectRatio !== "none") {
 } else {
 	aspectRatio = `${(mediaFit !== "Cover") ? (mediaWidth / 100) + "/" + (mediaHeight / 100) : (elWidth >= 768 && documentHeight < mediaHeight ? windowWidth / 200 : 1) + "/" + (elWidth >= 768 && documentHeight < mediaHeight ? documentHeight / 100 : 1)}`;
 }
+
+$: mediaScrollOffset = (1 - ((mediaElHeight / elHeight) || 0.5)) / 2;
 </script>
 
 <svelte:window bind:innerWidth={windowWidth} bind:innerHeight={windowHeight}></svelte:window>
 
 {#if isFilled.richText(content) || isFilled.link(data.button_link) || eyebrow || video || image}
-	<div data-items={items?.length > 0 ? items.length : null} bind:clientWidth={elWidth} class="grid min-h-full w-full {elWidth >= 768 && !forceMobileBreak ? "grid-cols-2" : ""}" use:inview={inViewOptions} on:inview_change={inViewChange} on:inview_animate={inViewAnimate} on:inview_init={inViewInit}>
-		<div class="media relative overflow-hidden w-full min-h-full aspect-[var(--aspect)] {elWidth >= 768 && desktopLayout !== "Image Left" ? "md:row-start-1 md:col-start-2" : ""} {elWidth < 768 && mobileLayout !== "Image Top" ? "row-start-2 col-start-1" : ""} {sectionPadding.toLowerCase() !== "none" || mediaRoundCorners === true ? "rounded-[var(--border-radius)]" : ""}" style="--aspect:{aspectRatio};">
-			{#if video}
-				<Video src={video.url.replace("http://", "https://")} fit={mediaFit.toLowerCase()} playback={videoPlayback} />
-			{/if}
-			{#if image && !video}
-				<Image src={image.url} fit={mediaFit.toLowerCase()} height={image.dimensions.height} width={image.dimensions.width} position={mediaPosition} alt={image.alt} />
-			{/if}
+	<div data-items={items?.length > 0 ? items.length : null} bind:clientWidth={elWidth} bind:clientHeight={elHeight} class="flex min-h-full w-full {elWidth >= 768 && !forceMobileBreak ? `${desktopLayout !== "Image Left" ? "flex-row-reverse" : "flex-row"}` : "flex-column"}" use:inview={inViewOptions} on:inview_change={inViewChange} on:inview_animate={inViewAnimate} on:inview_init={inViewInit}>
+		<div class="min-h-full w-full basis-[36%] flex-grow-0 flex-shrink-0">
+			<Parallax sections={1} sectionHeight={elHeight} threshold={{ top: 0, bottom: 0 }} config={{}}>
+				<ParallaxLayer rate={-mediaScrollOffset / 2} offset={mediaScrollOffset}>
+					<div bind:clientHeight={mediaElHeight} class="media relative overflow-hidden w-full aspect-[var(--aspect)] {sectionPadding.toLowerCase() !== "none" || mediaRoundCorners === true ? "rounded-[var(--border-radius)]" : ""}" style="--aspect:{aspectRatio};">
+						{#if video}
+							<Video src={video.url.replace("http://", "https://")} fit={mediaFit.toLowerCase()} playback={videoPlayback} />
+						{/if}
+						{#if image && !video}
+							<Image src={image.url} fit={mediaFit.toLowerCase()} height={image.dimensions.height} width={image.dimensions.width} position={mediaPosition} alt={image.alt} />
+						{/if}
+					</div>
+				</ParallaxLayer>
+			</Parallax>
 		</div>
 		{#if elWidth >= 768}
-			<div class="relative w-full {desktopLayout !== "Image Left" ? "col-start-1 row-start-1" : ""}">
-				<div class="flex h-full w-full {(sectionPadding === "None" || contentBoxBackgroundColor) ? "p-[var(--site-gutter)]" : (desktopLayout === "Image Left" ? "pl-[var(--site-gutter)]" : "pr-[var(--site-gutter)]")} {(contentBoxBackgroundColor) ? "bg-[var(--background-color)]" : ""} {(contentBoxFontColor) ? "text-[color:var(--content-color)]" : ""} {(contentBoxVertical === "Bottom") ? "items-end" : (contentBoxVertical === "Center") ? "items-center" : ""} {(contentBoxHorizontal === "Right") ? "justify-end" : (contentBoxHorizontal === "Center") ? "justify-center" : ""}" style="{(contentBoxBackgroundColor) ? `--background-color:${contentBoxBackgroundColor};` : ""} {(contentBoxFontColor) ? `--content-color:${contentBoxFontColor};` : ""}">
+			<div class="relative w-full basis-[64%] {desktopLayout !== "Image Left" ? "pr-[var(--content-gap)]" : "pl-[var(--content-gap)]"}">
+				<div class="flex h-full w-full {(sectionPadding === "None" || contentBoxBackgroundColor) ? "p-[var(--content-gutter)]" : (desktopLayout === "Image Left" ? "pl-[var(--site-gutter)]" : "pr-[var(--site-gutter)]")} {(contentBoxBackgroundColor) ? "bg-[var(--background-color)]" : ""} {(contentBoxFontColor) ? "text-[color:var(--content-color)]" : ""} {(contentBoxVertical === "Bottom") ? "items-end" : (contentBoxVertical === "Center") ? "items-center" : ""} {(contentBoxHorizontal === "Right") ? "justify-end" : (contentBoxHorizontal === "Center") ? "justify-center" : ""}" style="{(contentBoxBackgroundColor) ? `--background-color:${contentBoxBackgroundColor};` : ""} {(contentBoxFontColor) ? `--content-color:${contentBoxFontColor};` : ""}">
 					<div class="richtext {(contentBoxTextJustification === "Right") ? "text-right" : (contentBoxTextJustification === "Center") ? "text-center" : "text-left"} w-full">
 						{#if eyebrow}
 							<p class="eyebrow">{eyebrow}</p>

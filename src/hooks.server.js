@@ -1,5 +1,9 @@
 /** @type {import('@sveltejs/kit').Handle} */
+export const prerender = false;
+
 export const handle = async({ event, resolve }) => {
+
+	if(event.url.hostname === "svelte-prerender") return resolve(event);
 
 	/**
 	 * Cookies we'll need to check
@@ -9,7 +13,6 @@ export const handle = async({ event, resolve }) => {
 	const uid = event.cookies.get("uid");
 	const cat = event.cookies.get("cat");
 
-	event.locals.clientIp = event.getClientAddress();
 	event.locals.userid = uid || crypto.randomUUID();
 	event.locals.cat = cat || null;
 

@@ -65,6 +65,52 @@
             "default_value": "Primary"
           }
         },
+        "content_box_text_justification": {
+          "type": "Select",
+          "config": {
+            "label": "Content Box Text Justification",
+            "placeholder": "",
+            "options": [
+              "Left",
+              "Center",
+              "Right"
+            ],
+            "default_value": "Center"
+          }
+        },
+        "content_box_horizontal": {
+          "type": "Select",
+          "config": {
+            "label": "Content Box Horizontal Alignment",
+            "placeholder": "",
+            "options": [
+              "Left",
+              "Center",
+              "Right"
+            ],
+            "default_value": "Left"
+          }
+        },
+        "content_box_vertical": {
+          "type": "Select",
+          "config": {
+            "label": "Content Box Vertical Alignment",
+            "placeholder": "",
+            "options": [
+              "Top",
+              "Center",
+              "Bottom"
+            ],
+            "default_value": "Center"
+          }
+        },
+        "content_max_width": {
+          "type": "Number",
+          "config": {
+            "label": "Content Max Width (px)",
+            "placeholder": "Accepts values between 300 and 1600"
+          }
+        },
         "content_box_font_color": {
           "type": "Select",
           "config": {
@@ -236,6 +282,52 @@
               "Text"
             ],
             "default_value": "Primary"
+          }
+        },
+        "content_box_text_justification": {
+          "type": "Select",
+          "config": {
+            "label": "Content Box Text Justification",
+            "placeholder": "",
+            "options": [
+              "Left",
+              "Center",
+              "Right"
+            ],
+            "default_value": "Center"
+          }
+        },
+        "content_box_horizontal": {
+          "type": "Select",
+          "config": {
+            "label": "Content Box Horizontal Alignment",
+            "placeholder": "",
+            "options": [
+              "Left",
+              "Center",
+              "Right"
+            ],
+            "default_value": "Left"
+          }
+        },
+        "content_box_vertical": {
+          "type": "Select",
+          "config": {
+            "label": "Content Box Vertical Alignment",
+            "placeholder": "",
+            "options": [
+              "Top",
+              "Center",
+              "Bottom"
+            ],
+            "default_value": "Center"
+          }
+        },
+        "content_max_width": {
+          "type": "Number",
+          "config": {
+            "label": "Content Max Width (px)",
+            "placeholder": "Accepts values between 300 and 1600"
           }
         },
         "content_box_font_color": {

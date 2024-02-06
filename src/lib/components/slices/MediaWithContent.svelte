@@ -45,6 +45,7 @@ let contentBoxTextJustification = data?.content_box_text_justification || "Left"
 let contentBoxHorizontal = data?.content_box_horizontal || "Left";
 let contentBoxVertical = data?.content_box_vertical || "Top";
 let contentBreakOnMobile = data?.content_break_mobile || false;
+let contentMaxWidth = data?.content_max_width;
 
 /** Media */
 let image = (data?.image?.url) ? data.image : null;
@@ -87,8 +88,8 @@ $: if(mediaAspectRatio !== "none") {
 		{#if (eyebrow || content.length > 0 || buttonLink) && elWidth > 0}
 			{#if contentBreakOnMobile === false || elWidth >= 768}
 				<div data-items={items?.length > 0 ? items.length : null} class="absolute ca flex h-full left-0 pointer-events-none top-0 w-full z-[2] {(contentBoxVertical.toLowerCase() === "bottom") ? "items-end" : (contentBoxVertical.toLowerCase() === "center") ? "items-center" : "items-start"} {(contentBoxHorizontal === "Right") ? "justify-end" : (contentBoxHorizontal === "Center") ? "justify-center" : ""}">
-					<div class="w-full max-w-[800px] {(contentBoxBackgroundColor) ? "p-[var(--content-gutter)] bg-[var(--background-color)] rounded-[var(--border-radius)]" : ""} {(contentBoxFontColor) ? "text-[color:var(--content-color)]" : ""}" style="{(contentBoxBackgroundColor) ? `--background-color:${contentBoxBackgroundColor};` : ""} {(contentBoxFontColor) ? `--content-color:${contentBoxFontColor};` : ""}">
-						<div class="richtext pointer-events-auto {(contentBoxTextJustification === "Right") ? "text-right" : (contentBoxTextJustification === "Center") ? "text-center" : "text-left"}">
+					<div class="w-full {(contentBoxBackgroundColor) ? "p-[var(--content-gutter)] bg-[var(--background-color)] rounded-[var(--border-radius)]" : ""} {(contentBoxFontColor) ? "text-[color:var(--content-color)]" : ""}" style="{(contentBoxBackgroundColor) ? `--background-color:${contentBoxBackgroundColor};` : ""} {(contentBoxFontColor) ? `--content-color:${contentBoxFontColor};` : ""}">
+						<div class="richtext pointer-events-auto max-w-[var(--max-width)] {(contentBoxTextJustification === "Right") ? "text-right" : (contentBoxTextJustification === "Center") ? "text-center" : "text-left"}" style="--max-width:{(contentMaxWidth && contentMaxWidth >= 300 && contentMaxWidth <= 1600) ? contentMaxWidth + "px" : "100%"};">
 							{#if eyebrow}
 								<p class="eyebrow">{eyebrow}</p>
 							{/if}

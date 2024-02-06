@@ -7,8 +7,9 @@ let faviconObj = {};
 if(url.indexOf("prismic") > -1) {
 
 	favicon = url.replace("?auto=compress,format", "");
+	favicon = favicon.replace("?auto=format,compress", "");
 	faviconObj = {
-		"default": `${favicon}`,
+		"default": `${favicon}?w=96&h=96&fit=fill&fm=png`,
 		"x32": `${favicon}?w=32&h=32&fit=fill&fm=png`,
 		"x57": `${favicon}?w=57&h=57&fit=fill&fm=png`,
 		"x76": `${favicon}?w=76&h=76&fit=fill&fm=png`,

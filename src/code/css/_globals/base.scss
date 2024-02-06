@@ -13,14 +13,14 @@ body {
 	width: 100%;
 }
 
-body > .body-content {
+body > div {
 	height: 100%;
 	width: 100%;
 }
 
-body > .body-content > * {
+body > div > * {
 	font-family: $body;
-	font-weight: 400;
+	font-weight: 200;
 }
 
 main {
@@ -60,7 +60,7 @@ svg {
 *		-3xl: 1680+
 *		-4xl: 1920
 */
-:root {
+body > div {
 
 	--font-headline: "Hoefler Titling A", "Hoefler Titling B";
 	--font-body: "Verlag A", "Verlag B";
@@ -146,7 +146,7 @@ svg {
 	/* Borders */
 	--border-default-color: var(--border-default, #{$grey});
 	--border-radius: var(--border-radius-outer-base);
-	--border-radius-inner: var(--border-radius-inner-base 8px);
+	--border-radius-inner: var(--border-radius-inner-base, 8px);
 	--border-radius-input: var(--border-radius-input-base, 6px);
 
 	/* Buttons */
@@ -172,7 +172,7 @@ svg {
 /** Screens 480+ */
 @include screen-min-xs {
 
-	:root {
+	body > div {
 
 	}
 }
@@ -180,7 +180,7 @@ svg {
 /** Screens 640+ */
 @include screen-min-sm {
 
-	:root {
+	body > div {
 
 	}
 }
@@ -188,7 +188,7 @@ svg {
 /** Screens 768+ */
 @include screen-min-md {
 
-	:root {
+	body > div {
 
 	}
 }
@@ -196,7 +196,7 @@ svg {
 /** Screens 769+ (TABLET+) */
 @include screen-min-tb {
 
-	:root {
+	body > div {
 		--border-radius: var(--border-radius-outer-tb);
 		--border-radius-inner: var(--border-radius-inner-tb);
 		--border-radius-input: var(--border-radius-input-tb);
@@ -239,7 +239,7 @@ svg {
 /** Screens 1024+ */
 @include screen-min-lg {
 
-	:root {
+	body > div {
 
 	}
 }
@@ -247,7 +247,7 @@ svg {
 /** Screens 1025+ (DESKTOP+) */
 @include screen-min-dk {
 
-	:root {
+	body > div {
 		--border-radius: var(--border-radius-outer-dk);
 		--border-radius-inner: var(--border-radius-inner-dk);
 		--border-radius-input: var(--border-radius-input-dk);
@@ -270,7 +270,7 @@ svg {
 /** Screens 1280+ */
 @include screen-min-xl {
 
-	:root {
+	body > div {
 
 	}
 }
@@ -278,7 +278,7 @@ svg {
 /** Screens 1440+ */
 @include screen-min-2xl {
 
-	:root {
+	body > div {
 
 	}
 }
@@ -286,7 +286,7 @@ svg {
 /** Screens 1680+ */
 @include screen-min-3xl {
 
-	:root {
+	body > div {
 
 	}
 }
@@ -294,7 +294,7 @@ svg {
 /** Screens 1920+ */
 @include screen-min-4xl {
 
-	:root {
+	body > div {
 
 	}
 }

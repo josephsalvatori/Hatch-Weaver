@@ -54,7 +54,7 @@ export const processImages = (options) => {
 	let closestSize = widths.reduce((prev, cur) => (Math.abs(cur - width) < Math.abs(prev - width) ? cur : prev));
 	let closest = fn({ src, srcMobile, breakpoint, quality, size: closestSize });
 	let images = widths.map(size => fn({ src, srcMobile, breakpoint, quality, size }));
-	let plchldr = fn({ src, srcMobile, breakpoint, quality, size: widths[0] })
+	let plchldr = fn({ src, srcMobile, breakpoint, quality, size: widths[0] });
 
 	return {
 		raw: images,
@@ -65,8 +65,62 @@ export const processImages = (options) => {
 };
 
 export const output = {
-	unsplash: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `${src}&w=${size} ${size}w` : `${srcMobile}&w=${size} ${size}w`),
-	unsplashdev: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `${src}&w=${size} ${size}w` : `${srcMobile}&w=${size} ${size}w`),
+	unsplash: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => {
+
+		let url = new URL(src);
+
+		url.searchParams.delete("fm");
+		url.searchParams.delete("q");
+		url.searchParams.delete("w");
+		url.searchParams.delete("auto");
+		url.searchParams.append("auto", "format,compress");
+
+		let urlMobile;
+
+		if(src !== srcMobile) {
+
+			urlMobile = new URL(srcMobile);
+
+			urlMobile.searchParams.delete("fm");
+			urlMobile.searchParams.delete("q");
+			urlMobile.searchParams.delete("w");
+			urlMobile.searchParams.delete("auto");
+			urlMobile.searchParams.append("auto", "format,compress");
+
+		} else {
+			urlMobile = url;
+		}
+
+		return ((size > breakpoint) ? `${url.toString()}&w=${size} ${size}w` : `${urlMobile.toString()}&w=${size} ${size}w`);
+	},
+	unsplashdev: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => {
+
+		let url = new URL(src);
+
+		url.searchParams.delete("fm");
+		url.searchParams.delete("q");
+		url.searchParams.delete("w");
+		url.searchParams.delete("auto");
+		url.searchParams.append("auto", "format,compress");
+
+		let urlMobile;
+
+		if(src !== srcMobile) {
+
+			urlMobile = new URL(srcMobile);
+
+			urlMobile.searchParams.delete("fm");
+			urlMobile.searchParams.delete("q");
+			urlMobile.searchParams.delete("w");
+			urlMobile.searchParams.delete("auto");
+			urlMobile.searchParams.append("auto", "format,compress");
+
+		} else {
+			urlMobile = url;
+		}
+
+		return ((size > breakpoint) ? `${url.toString()}&w=${size} ${size}w` : `${urlMobile.toString()}&w=${size} ${size}w`);
+	},
 	prismic: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `/_vercel/image?url=${encodeURIComponent(src + `&w=${size}`)}&w=${size}&q=${quality} ${size}w` : `/_vercel/image?url=${encodeURIComponent(srcMobile + `&w=${size}`)}&w=${size}&q=${quality} ${size}w`),
 	prismicdev: ({ src, srcMobile, breakpoint = 768, quality = 90, size }) => ((size > breakpoint) ? `${src}&w=${size} ${size}w` : `${srcMobile}&w=${size} ${size}w`),
 	shopify: ({ src, srcMobile, breakpoint = 768, size }) => {

@@ -47,6 +47,7 @@ if(max > 5) max = 5;
 }
 
 :global(.grid-align-start) {
+	align-items: start;
 	justify-content: normal;
 }
 

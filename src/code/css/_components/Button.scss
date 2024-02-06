@@ -2,7 +2,8 @@ $easeIn: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 $easeOut: cubic-bezier(0.215, 0.61, 0.355, 1);
 
 a,
-button {
+button,
+span {
 
 	&.btn,
 	&.btn-inherit,
@@ -367,9 +368,9 @@ button {
 	&.btn-pill {
 		background-color: var(--theme-color-button-background);
 		border: 2px solid var(--theme-color-button-background);
-		border-radius: var(--border-radius-input, 8px);
+		border-radius: var(--border-radius, 8px);
 		color: var(--theme-color-button-font);
-		padding: 2px 8px;
+		padding: 3px 20px;
 	}
 
 	/** Nav */
@@ -390,12 +391,21 @@ button {
 		}
 	}
 
+	/** Nav Link **/
+	&.btn-link {
+		font-weight: 400;
+
+		&.is-active {
+
+			border-bottom: 2px solid currentColor;
+		}
+	}
+
 	/** Circle */
 	&.btn-circle {
-		background-color: var(--theme-color-background);
-		border-color: var(--theme-color-font);
-		color: var(--theme-color-font);
-		border: 2px solid currentColor;
+		background-color: transparent;
+		border: 1px solid;
+		border-color: currentColor;
 		border-radius: 100%;
 		display: block;
 		padding: 5px;
@@ -412,6 +422,28 @@ button {
 		&:focus-visible {
 			outline: 1px dotted;
 			outline-offset: -4px;
+		}
+	}
+
+	&.btn-bullet {
+		background-color: transparent;
+		border: 2px solid currentColor;
+		border-color: var(--theme-color-button-font);
+		border-radius: 100%;
+
+		&.is-active {
+			background-color: var(--theme-color-button-font);
+		}
+	}
+
+	&.btn-arrow {
+		background-color: transparent;
+		border-color: var(--theme-color-button-font);
+		border-radius: 100%;
+		color: var(--theme-color-button-font);
+
+		&.is-active {
+			background-color: var(--theme-color-button-font);
 		}
 	}
 

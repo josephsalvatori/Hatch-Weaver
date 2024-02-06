@@ -5,7 +5,6 @@
  * @typedef {Object} Components~ResponsiveImage
  */
 import { onMount } from "svelte";
-import { dev } from "$app/environment";
 import { page } from "$app/stores";
 import { storage } from "$lib/stores/storage";
 import LazyLoad from "vanilla-lazyload";
@@ -21,7 +20,7 @@ export let src; // string or object?
 export let srcMobile = src;
 export let width = 2048;
 export let type = "responsive";
-export let placeholder = true;
+export let placeholder = false;
 
 position = position.toLowerCase();
 

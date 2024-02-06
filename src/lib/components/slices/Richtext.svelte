@@ -2,7 +2,7 @@
 import inview from "$lib/stores/observer";
 import Button from "$lib/components/molecules/Button.svelte";
 import { asHTML, isFilled } from "@prismicio/helpers";
-import { staggerFade } from "$js/_helpers/animation";
+import { staggerFadeIn } from "$js/_helpers/animation";
 import { richTextSerializer } from "$js/_helpers/strings";
 import { refs } from "$js/_helpers/refs";
 import { slugify } from "$js/_helpers/slugify";
@@ -22,7 +22,7 @@ export let items = [];
 let animation;
 let isInView = false;
 let inViewOptions = {};
-let inViewInit = ({ detail, node }) => { animation = staggerFade(detail.node.children); animation.init(); };
+let inViewInit = ({ detail, node }) => { animation = staggerFadeIn(detail.node.children, { to: { duration: 1.5 }}); animation.init(); };
 let inViewChange = ({ detail }) => isInView = detail?.inView;
 let inViewAnimate = ({ detail }) => animation.run();
 

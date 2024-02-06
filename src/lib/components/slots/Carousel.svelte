@@ -10,6 +10,7 @@ export let alignment = "start";
 export let items = [];
 export let selected = null;
 export let arrows = true;
+export let bullets = false;
 export let thumbs = false;
 export let effect = "fade";
 export let params = {};
@@ -91,14 +92,24 @@ $: if(selected && selected.node.image.url !== lockedSelection?.node?.image?.url)
 >
 	<div slot="container-end">
 		{#if pages > 1 && arrows === true}
-			<div class="flex items-center justify-center pt-[var(--content-gap)] pb-[5px]">
-				<button class="btn-circle cursor-pointer" aria-label="Previous Slide" on:click={() => { swiper.swiper.slidePrev(); }}><ArrowLeftIcon strokeWidth={2} /></button>
-				<ul class="flex mx-[var(--content-gap)]">
-					{#each {length: pages} as _, i}
-						<li class="mx-[4px]"><button type="button" tabindex="-1" class="btn-circle {activeIndex === i ? "is-active cursor-default" : ""} w-[10px] h-[10px] border-2" on:click={() => swiper.swiper.slideTo(i)}></button></li>
-					{/each}
-				</ul>
-				<button class="btn-circle cursor-pointer" aria-label="Next Slide" on:click={() => { swiper.swiper.slideNext(); }}><ArrowRightIcon strokeWidth={2} /></button>
+			<div class="absolute z-[5] bottom-0 h-full w-full pointer-events-none">
+				<button class="absolute left-0 top-0 cursor-pointer h-full hover:bg-white/10 pointer-events-auto w-[var(--site-gutter)]" aria-label="Previous Slide" on:click={() => { swiper.swiper.slidePrev(); }}>
+					<span class="btn-circle block">
+						<ArrowLeftIcon strokeWidth={2} />
+					</span>
+				</button>
+				{#if bullets}
+					<ul class="flex mx-[var(--content-gap)] pointer-events-auto">
+						{#each {length: pages} as _, i}
+							<li class="mx-[4px]"><button type="button" tabindex="-1" class="btn-bullet {activeIndex === i ? "is-active cursor-default" : ""} w-[10px] h-[10px] border-2" on:click={() => swiper.swiper.slideTo(i)}></button></li>
+						{/each}
+					</ul>
+				{/if}
+				<button class="absolute right-0 top-0 cursor-pointer h-full pointer-events-auto w-[var(--site-gutter)]" aria-label="Next Slide" on:click={() => { swiper.swiper.slideNext(); }}>
+					<span class="btn-circle block">
+						<ArrowRightIcon strokeWidth={2} />
+					</span>
+				</button>
 			</div>
 		{/if}
 	</div>

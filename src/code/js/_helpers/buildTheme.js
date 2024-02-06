@@ -9,7 +9,7 @@ export const buildTheme = (data) => {
 
 	// TODO: Need to build theme out
 
-	console.log(data);
+	// console.log("theme", data);
 
 	return theme;
 }

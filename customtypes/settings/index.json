@@ -49,6 +49,14 @@
           "select": "web"
         }
       },
+      "linked_in_url": {
+        "type": "Link",
+        "config": {
+          "label": "LinkedIn URL",
+          "placeholder": "",
+          "select": "web"
+        }
+      },
       "instagram_url": {
         "type": "Link",
         "config": {

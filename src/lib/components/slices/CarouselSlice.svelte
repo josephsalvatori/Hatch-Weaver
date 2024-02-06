@@ -50,9 +50,9 @@ let maxSlides = carouselPages * columnCount;
 </script>
 
 {#if isFilled.sliceZone(contentFlex) || isFilled.richText(content) || eyebrow}
-	<div class="relative w-full" use:inview={inViewOptions} on:inview_change={inViewChange} on:inview_animate={inViewAnimate} on:inview_init={inViewInit}>
+	<div class="relative w-full {(contentBoxFontColor) ? "text-[color:var(--content-color)]" : ""}" style="{(contentBoxFontColor) ? `--content-color:${contentBoxFontColor};` : ""}" use:inview={inViewOptions} on:inview_change={inViewChange} on:inview_animate={inViewAnimate} on:inview_init={inViewInit}>
 		{#if isFilled.richText(content) || eyebrow || buttonLink}
-			<div data-items={items?.length > 0 ? items.length : null} class="flex items-end justify-between mb-[var(--site-gutter)] {(contentBoxFontColor) ? "text-[color:var(--content-color)]" : ""}" style="{(contentBoxFontColor) ? `--content-color:${contentBoxFontColor};` : ""}">
+			<div data-items={items?.length > 0 ? items.length : null} class="flex items-end justify-between mb-[var(--site-gutter)]">
 				<div class="flex-grow richtext max-w-[var(--max-width)] w-full {(contentBoxTextJustification === "Right") ? "text-right" : (contentBoxTextJustification === "Center") ? "text-center" : "text-left"}" style="--max-width:{(contentMaxWidth && contentMaxWidth >= 300 && contentMaxWidth <= 1600) ? contentMaxWidth + "px" : "100%"};">
 					{#if eyebrow}
 						<p class="eyebrow">{eyebrow}</p>

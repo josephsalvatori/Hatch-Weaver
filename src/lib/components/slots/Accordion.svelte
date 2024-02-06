@@ -12,18 +12,20 @@ if(typeof title === "object") {
 </script>
 
 <article>
-	<div class="list-none flex justify-between items-center cursor-pointer py-[10px] border-t-2">
-		<button type="button" tabindex="-1" class="font-bold leading-none text-left text-[length:20px] cr" on:keypress={() => {}} on:click|stopPropagation={() => { open = !open }}>{@html title}</button>
-		<button type="button" aria-label="Toggle Drawer" class="btn-input !w-[32px] !p-[6px] {(open === true ? "active" : "")}" on:click|stopPropagation={() => { open = !open }}>
+	<div class="list-none flex justify-between items-center cursor-pointer py-[16px] border-current border-t">
+		<button type="button" tabindex="-1" class="font-[400] leading-none text-[length:24px] text-left cr" on:keypress={() => {}} on:click|stopPropagation={() => { open = !open }}>
+			{@html title}
+		</button>
+		<button type="button" aria-label="Toggle Drawer" class="btn-circle text-current !w-[40px] !p-[8px] {(open === true ? "active" : "")}" on:click|stopPropagation={() => { open = !open }}>
 			{#if open === true}
-				<MinusIcon size="24" />
+				<MinusIcon strokeWidth={1} size={"24"} />
 			{:else}
-				<PlusIcon size="24" />
+				<PlusIcon strokeWidth={1} size={"24"} />
 			{/if}
 		</button>
 	</div>
 	{#if open}
-		<div class="richtext pb-[var(--content-gutter)]" transition:slide={{ axis: "y", duration: 50 }}>
+		<div class="richtext text-[length:0.8em] pb-[var(--content-gutter)]" transition:slide={{ axis: "y", duration: 50 }}>
 			<slot />
 		</div>
 	{/if}
