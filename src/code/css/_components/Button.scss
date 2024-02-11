@@ -3,7 +3,8 @@ $easeOut: cubic-bezier(0.215, 0.61, 0.355, 1);
 
 a,
 button,
-span {
+span,
+.btn-wrapper {
 
 	&.btn,
 	&.btn-inherit,
@@ -17,8 +18,8 @@ span {
 		border-width: var(--border-width, 2px);
 		display: inline-flex;
 		font-family: var(--font-body);
-		font-size: em(32px);
-		font-weight: 300;
+		font-size: em(28px);
+		font-weight: 200;
 		height: 72px;
 		justify-content: center;
 		line-height: 1;
@@ -370,7 +371,14 @@ span {
 		border: 2px solid var(--theme-color-button-background);
 		border-radius: var(--border-radius, 8px);
 		color: var(--theme-color-button-font);
+		font-weight: 400;
 		padding: 3px 20px;
+
+		&:hover,
+		&:focus-visible {
+			background-color: var(--theme-color-button-font);
+			color: var(--theme-color-button-background);
+		}
 	}
 
 	/** Nav */
@@ -383,6 +391,33 @@ span {
 
 		&:focus-visible {
 
+		}
+
+		// TODO: Active page link styles?
+		&.is-active {
+
+		}
+	}
+
+	&.btn-accordion {
+		outline: 0 none;
+
+		> * {
+			font-family: $body;
+		}
+
+		&:hover {
+
+		}
+
+		&:focus-visible {
+
+			> :first-child {
+				text-decoration-color: rgba(var(--content-color), 0.65);
+				text-decoration-line: underline;
+				text-decoration-style: dotted;
+				text-decoration-thickness: 1px;
+			}
 		}
 
 		// TODO: Active page link styles?
@@ -407,6 +442,7 @@ span {
 		border: 1px solid;
 		border-color: currentColor;
 		border-radius: 100%;
+		color: currentColor;
 		display: block;
 		padding: 5px;
 
@@ -414,9 +450,9 @@ span {
 		&:focus-visible,
 		&:hover,
 		&.is-active {
-			background-color: var(--theme-color-font);
+			background-color: var(--theme-color-background);
 			border-color: var(--theme-color-font);
-			color: var(--theme-color-background);
+			color: var(--theme-color-font);
 		}
 
 		&:focus-visible {

@@ -1,32 +1,17 @@
 <script>
-import { browser, dev } from "$app/environment";
 import { beforeNavigate } from "$app/navigation";
 import { page } from "$app/stores";
 import { context } from "$lib/stores/storage";
 import { user } from "$lib/stores/user";
-import { webVitals } from "$lib/integrations/vitals";
 import TailwindConfig from "$lib/integrations/tailwind/TailwindConfig.svelte";
 import Analytics from "$lib/integrations/analytics/Analytics.svelte";
-import GlobalHeader from "$lib/components/sections/GlobalHeader.svelte";
-import GlobalFooter from "$lib/components/sections/GlobalFooter.svelte";
 import Container from "$lib/components/slots/Container.svelte";
 import Favicon from "$lib/components/utilities/Favicon.svelte";
-import Metadata from "$lib/components/utilities/Metadata.svelte";
 import { onMount } from "svelte";
 import { MetaTags } from "svelte-meta-tags";
-import config from "../../slicemachine.config.json";
 
 /** @type {import('./$types').PageData} */
 export let data;
-
-$: if(!dev && browser && data?.analyticsId) {
-
-	webVitals({
-		path: $page.url.pathname,
-		params: $page.params,
-		analyticsId: data.analyticsId
-	});
-}
 
 /** Reactive metatags */
 $: metaTags = {

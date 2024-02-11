@@ -6,7 +6,7 @@ export let object = {};
 export let open = false;
 </script>
 {#if dev}
-	<details class="border-y p-[15px]" open={open}>
+	<details class="border-y p-[15px] -mt-px" open={open}>
 		<summary>{title}</summary>
 		<pre class="whitespace-pre-wrap break-words">{JSON.stringify(object, null, 4)}</pre>
 	</details>

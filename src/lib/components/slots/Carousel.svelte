@@ -84,16 +84,16 @@ $: if(selected && selected.node.image.url !== lockedSelection?.node?.image?.url)
 	effect={effect}
 	init={false}
 	on:slidechange={(s) => {
-		activeIndex = s.detail[0].snapIndex || s.detail[0].activeIndex;
+		// activeIndex = s.detail[0].snapIndex || s.detail[0].activeIndex;
 	}}
 	on:snapgridlengthchange={(s) => {
-		pages = s.detail[0].snapGrid.length;
+		// pages = s.detail[0].snapGrid.length;
 	}}
 >
 	<div slot="container-end">
 		{#if pages > 1 && arrows === true}
 			<div class="absolute z-[5] bottom-0 h-full w-full pointer-events-none">
-				<button class="absolute left-0 top-0 cursor-pointer h-full hover:bg-white/10 pointer-events-auto w-[var(--site-gutter)]" aria-label="Previous Slide" on:click={() => { swiper.swiper.slidePrev(); }}>
+				<button class="absolute left-[calc(var(--content-gutter)_/_2)] top-1/2 -translate-y-1/2 cursor-pointer h-auto pointer-events-auto w-[36px]" aria-label="Previous Slide" on:click={() => { swiper.swiper.slidePrev(); }}>
 					<span class="btn-circle block">
 						<ArrowLeftIcon strokeWidth={2} />
 					</span>
@@ -105,7 +105,7 @@ $: if(selected && selected.node.image.url !== lockedSelection?.node?.image?.url)
 						{/each}
 					</ul>
 				{/if}
-				<button class="absolute right-0 top-0 cursor-pointer h-full pointer-events-auto w-[var(--site-gutter)]" aria-label="Next Slide" on:click={() => { swiper.swiper.slideNext(); }}>
+				<button class="absolute right-[calc(var(--content-gutter)_/_2)] top-1/2 -translate-y-1/2 cursor-pointer h-auto pointer-events-auto w-[36px]" aria-label="Next Slide" on:click={() => { swiper.swiper.slideNext(); }}>
 					<span class="btn-circle block">
 						<ArrowRightIcon strokeWidth={2} />
 					</span>

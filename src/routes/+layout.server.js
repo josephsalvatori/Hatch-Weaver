@@ -1,6 +1,6 @@
 import { error } from "@sveltejs/kit";
 import { get } from "svelte/store";
-import { env } from "$env/dynamic/private";
+import { CONTENT_PREVIEW_COOKIE } from "$env/static/private";
 import { Api } from "$api";
 import { server } from "$lib/stores/content";
 import { parseGoogleFonts } from "$js/_helpers/fonts";
@@ -104,12 +104,10 @@ export async function load({ cookies, locals, fetch, params, request, url }) {
 	}
 
 	return {
-		analyticsId: env.VERCEL_ANALYTICS_ID,
 		cssVars: varObj,
 		googleFonts: (fontObj) ? fontObj : null,
-		preview: cookies.get(env.CONTENT_PREVIEW_COOKIE),
+		preview: cookies.get(CONTENT_PREVIEW_COOKIE),
 		settings: serverStore,
-		storefrontUrl: env.STOREFRONT_API_URL,
 		userid: locals.userid,
 		userAgent: (request.headers.get("user-agent") ? request.headers.get("user-agent").toLowerCase() : ""),
 		token: locals.cat?.accessToken

@@ -12,18 +12,18 @@ if(typeof title === "object") {
 </script>
 
 <article>
-	<div class="list-none flex justify-between items-center cursor-pointer py-[16px] border-current border-t">
-		<button type="button" tabindex="-1" class="font-[400] leading-none text-[length:24px] text-left cr" on:keypress={() => {}} on:click|stopPropagation={() => { open = !open }}>
+	<button type="button" class="btn-accordion list-none flex justify-between items-center cursor-pointer py-[16px] border-current border-t w-full" on:keypress={() => {}} on:click|stopPropagation={() => { open = !open }}>
+		<h4 tabindex="-1" class="font-[400] leading-none text-[length:24px] text-left cr">
 			{@html title}
-		</button>
-		<button type="button" aria-label="Toggle Drawer" class="btn-circle text-current !w-[40px] !p-[8px] {(open === true ? "active" : "")}" on:click|stopPropagation={() => { open = !open }}>
+		</h4>
+		<div aria-label="Toggle Drawer" class="btn-wrapper btn-circle text-current !w-[40px] !p-[8px]" class:is-active={open}>
 			{#if open === true}
 				<MinusIcon strokeWidth={1} size={"24"} />
 			{:else}
 				<PlusIcon strokeWidth={1} size={"24"} />
 			{/if}
-		</button>
-	</div>
+		</div>
+	</button>
 	{#if open}
 		<div class="richtext text-[length:0.8em] pb-[var(--content-gutter)]" transition:slide={{ axis: "y", duration: 50 }}>
 			<slot />

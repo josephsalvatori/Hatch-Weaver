@@ -29,6 +29,7 @@ if(settings?.data?.instagram_url?.url) websiteSameAs.push(settings.data.instagra
 if(settings?.data?.tiktok_url?.url) websiteSameAs.push(settings.data.tiktok_url.url);
 if(settings?.data?.twitter_url?.url) websiteSameAs.push(settings.data.twitter_url.url);
 if(settings?.data?.youtube_url?.url) websiteSameAs.push(settings.data.youtube_url.url);
+if(settings?.data?.linked_in_url?.url) websiteSameAs.push(settings.data.linked_in_url.url);
 
 websiteSchema = {
 	"@context": "https://schema.org",
@@ -116,6 +117,7 @@ if(type === "Product") {
 {/if} -->
 
 {#if type === "WebSite"}
+	<Debug object={websiteSchema} title={"WebSite"} />
 	<JsonLd schema={websiteSchema} output={"body"} />
 {/if}
 

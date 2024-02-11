@@ -47,6 +47,35 @@ let columnCount = data?.content_per_page || 3;
 
 /** Active Variables */
 let maxSlides = carouselPages * columnCount;
+
+/**
+ * Default params
+ */
+let params = {
+	loop: true,
+	loopPreventsSliding: true,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
+	spaceBetween: 0,
+	breakpoints: {
+		640: {
+			slidesPerView: (columnCount < 2) ? columnCount : 2,
+			slidesPerGroup: (columnCount < 2) ? columnCount : 2
+		},
+		1024: {
+			slidesPerView: (columnCount < 3) ? columnCount : 3,
+			slidesPerGroup: (columnCount < 3) ? columnCount : 3
+		},
+		1440: {
+			slidesPerView: (columnCount < 4) ? columnCount : 4,
+			slidesPerGroup: (columnCount < 4) ? columnCount : 4
+		},
+		1680: {
+			slidesPerView: (columnCount < 5) ? columnCount : 5,
+			slidesPerGroup: (columnCount < 5) ? columnCount : 5
+		}
+	}
+};
 </script>
 
 {#if isFilled.sliceZone(contentFlex) || isFilled.richText(content) || eyebrow}
@@ -67,30 +96,7 @@ let maxSlides = carouselPages * columnCount;
 			</div>
 		{/if}
 		{#if typeof contentFlex === "object" && contentFlex.length > 1}
-			<Carousel items={contentFlex} alignment={columnAlignment} effect={"slide"} overflow={true} params={{
-				loop: false,
-				slidesPerView: 1,
-				slidesPerGroup: 1,
-				spaceBetween: 0,
-				breakpoints: {
-					640: {
-						slidesPerView: (columnCount < 2) ? columnCount : 2,
-						slidesPerGroup: (columnCount < 2) ? columnCount : 2
-					},
-					1024: {
-						slidesPerView: (columnCount < 3) ? columnCount : 3,
-						slidesPerGroup: (columnCount < 3) ? columnCount : 3
-					},
-					1440: {
-						slidesPerView: (columnCount < 4) ? columnCount : 4,
-						slidesPerGroup: (columnCount < 4) ? columnCount : 4
-					},
-					1680: {
-						slidesPerView: (columnCount < 5) ? columnCount : 5,
-						slidesPerGroup: (columnCount < 5) ? columnCount : 5
-					}
-				}
-			}}>
+			<Carousel items={contentFlex} alignment={columnAlignment} effect={"slide"} overflow={true} params={params}>
 				{#each contentFlex as slice, i}
 					{#if i <= maxSlides}
 						<swiper-slide class="h-auto">
