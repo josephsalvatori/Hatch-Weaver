@@ -8,66 +8,66 @@ import SliceSwitch from "$lib/components/utilities/SliceSwitch.svelte";
 	<div class="bg-hw-text-bg grid dk:grid-cols-2 p-[var(--content-gutter)] rounded-[var(--border-radius)] gap-[var(--grid-gap)] mb-[var(--grid-gap)]">
 		<div class="w-full relative text-hw-text">
 			<div class="w-full h-[150px] bg-hw-text rounded-[var(--border-radius-inner)]"></div>
-			<p class="eyebrow mt-4">Brand Text 1</p>
+			<p class="eyebrow mt-4">Brand Text 1 - #E4E4E4</p>
 		</div>
 		<div class="w-full relative text-hw-text-2">
 			<div class="w-full h-[150px] bg-hw-text-2 rounded-[var(--border-radius-inner)]"></div>
-			<p class="eyebrow mt-4">Brand Text 2</p>
+			<p class="eyebrow mt-4">Brand Text 2 - #FEFEFE</p>
 		</div>
 	</div>
 	<div class="bg-hw-text grid dk:grid-cols-2 p-[var(--content-gutter)] rounded-[var(--border-radius)] gap-[var(--grid-gap)] mb-[var(--grid-gap)]">
 		<div class="w-full relative text-hw-text-bg">
 			<div class="w-full h-[150px] bg-hw-text-bg rounded-[var(--border-radius-inner)]"></div>
-			<p class="eyebrow mt-4">Brand Background 1</p>
+			<p class="eyebrow mt-4">Brand Background 1 - #232F3B</p>
 		</div>
 		<div class="w-full relative text-hw-text-bg-2">
 			<div class="w-full h-[150px] bg-hw-text-bg-2 rounded-[var(--border-radius-inner)]"></div>
-			<p class="eyebrow mt-4">Brand Background 2</p>
+			<p class="eyebrow mt-4">Brand Background 2 - #212120</p>
 		</div>
 	</div>
 	<div class="grid dk:grid-cols-2 gap-[var(--grid-gap)]">
 		<div class="bg-hw-text grid p-[var(--content-gutter)] rounded-[var(--border-radius)] gap-[var(--grid-gap)]">
 			<div class="w-full relative text-hw-accent-1">
 				<div class="w-full h-[150px] bg-hw-accent-1 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 1</p>
+				<p class="eyebrow mt-4">Brand Accent 1 - #232F3B</p>
 			</div>
 			<div class="w-full relative text-hw-accent-4">
 				<div class="w-full h-[150px] bg-hw-accent-4 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 4</p>
+				<p class="eyebrow mt-4">Brand Accent 4 - #BF1919</p>
 			</div>
 			<div class="w-full relative text-hw-accent-2">
 				<div class="w-full h-[150px] bg-hw-accent-2 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 2</p>
+				<p class="eyebrow mt-4">Brand Accent 2 - #8CA9BD</p>
 			</div>
 			<div class="w-full relative text-hw-accent-5">
 				<div class="w-full h-[150px] bg-hw-accent-5 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 5</p>
+				<p class="eyebrow mt-4">Brand Accent 5 - #BAC944</p>
 			</div>
 			<div class="w-full relative text-hw-accent-3">
 				<div class="w-full h-[150px] bg-hw-accent-3 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 3</p>
+				<p class="eyebrow mt-4">Brand Accent 3 - #AD8FBF</p>
 			</div>
 		</div>
 		<div class="bg-hw-text-bg grid p-[var(--content-gutter)] rounded-[var(--border-radius)] gap-[var(--grid-gap)]">
 			<div class="w-full relative text-hw-accent-6">
 				<div class="w-full h-[150px] bg-hw-accent-6 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 6</p>
+				<p class="eyebrow mt-4">Brand Accent 6 - #E4E4E4</p>
 			</div>
 			<div class="w-full relative text-hw-accent-4">
 				<div class="w-full h-[150px] bg-hw-accent-4 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 4</p>
+				<p class="eyebrow mt-4">Brand Accent 4 - #BF1919</p>
 			</div>
 			<div class="w-full relative text-hw-accent-2">
 				<div class="w-full h-[150px] bg-hw-accent-2 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 2</p>
+				<p class="eyebrow mt-4">Brand Accent 2 - #8CA9BD</p>
 			</div>
 			<div class="w-full relative text-hw-accent-5">
 				<div class="w-full h-[150px] bg-hw-accent-5 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 5</p>
+				<p class="eyebrow mt-4">Brand Accent 5 - #BAC944</p>
 			</div>
 			<div class="w-full relative text-hw-accent-3">
 				<div class="w-full h-[150px] bg-hw-accent-3 rounded-[var(--border-radius-inner)]"></div>
-				<p class="eyebrow mt-4">Brand Accent 3</p>
+				<p class="eyebrow mt-4">Brand Accent 3 - #AD8FBF</p>
 			</div>
 		</div>
 		<div class="grid rounded-[var(--border-radius)] gap-[var(--grid-gap)] mb-[var(--grid-gap)]">

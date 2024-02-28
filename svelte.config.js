@@ -26,7 +26,9 @@ const config = {
 			crawl: true,
 			entries: [
 				"/",
-				"/articles"
+				"/articles",
+				"/styleguide",
+				"/moduleguide"
 			],
 			handleHttpError: "warn"
 		}
