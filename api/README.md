@@ -1,1 +1,0 @@
-This folder is for Go, Python, or Ruby runtime serverless function endpoints

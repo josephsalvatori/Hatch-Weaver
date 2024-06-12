@@ -9,7 +9,6 @@ const config = {
 	kit: {
 		adapter: adapter({
 			fallback: "index.html",
-			runtime: "nodejs18.x" // runtime environment on hosting platform
 		}),
 		alias: {
 			"$api": "./src/lib/integrations/index",
