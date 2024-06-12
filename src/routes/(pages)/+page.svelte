@@ -7,7 +7,7 @@ export let data;
 
 <div class="min-h-screen grid items-center w-full bg-blue-50">
 	<div class="flex items-center justify-center mx-auto">
-		<div class="richtext max-w-[800px] px-[var(--site-gutter)]">
+		<div class="richtext max-w-[1020px] px-[var(--site-gutter)]">
 			<h1>Currently incubating.</h1>
 			<p>Getting ready to hatch soon.</p>
 		</div>`
