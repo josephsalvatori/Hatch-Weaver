@@ -147,6 +147,10 @@ h1,
 .h1 {
 	font-size: em(82px);
 	font-weight: 300;
+
+	@include mobile {
+		font-size: em(60px);
+	}
 }
 
 h2,
@@ -184,6 +188,10 @@ p {
 	font-weight: 200;
 	letter-spacing: $body-spacing;
 	line-height: $body-line-height;
+
+	@include mobile {
+		font-size: em(24px);
+	}
 
 	// @include tablet {
 	// 	font-size: em(24px);

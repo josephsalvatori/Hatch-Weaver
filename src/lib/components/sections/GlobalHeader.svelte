@@ -38,7 +38,7 @@ beforeNavigate(() => {
 	{#if windowWidth > 0}
 		<nav aria-label="Main Navigation" class="">
 			<!-- <div class="bg-[var(--background-color)] text-[color:var(--text-color)] px-[10px] flex fixed h-[50px] min-h-[50px] items-center justify-between left-[var(--site-gutter)] top-[10px] w-[calc(100%_-_(var(--site-gutter)_*_2))] rounded-[var(--border-radius)] z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};"> -->
-			<div class="text-[color:var(--text-color)] px-[10px] flex fixed h-[50px] min-h-[50px] items-center justify-between left-[var(--site-gutter)] top-[10px] w-[calc(100%_-_(var(--site-gutter)_*_2))] z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
+			<div class="text-[color:var(--text-color)] flex fixed h-[50px] min-h-[50px] items-center justify-between left-[var(--site-gutter)] top-[10px] w-[calc(100%_-_(var(--site-gutter)_*_2))] z-[81]" style="--background-color: {contentBackgroundColor}; --text-color: {contentFontColor};">
 				{#if windowWidth <= 768}
 					<div>
 						<button type="button" class="btn-hamburger {(drawerOpen) ? "is-active" : ""} relative z-[90]" on:keydown={() => {}} on:click|preventDefault={() => { drawerOpen = !drawerOpen; }}>
