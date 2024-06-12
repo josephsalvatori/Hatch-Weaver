@@ -11,4 +11,4 @@ import Metadata from "$lib/components/utilities/Metadata.svelte";
 	<slot />
 	<Metadata type="WebSite" />
 </main>
-<!-- <GlobalFooter /> -->
+<GlobalFooter />
